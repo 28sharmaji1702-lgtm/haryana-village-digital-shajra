@@ -53,7 +53,9 @@ function Header() {
           >
             Home
           </NavLink>
-
+<NavLink to="/coverage">
+  Coverage
+</NavLink>
           <NavLink to="/about">
             About
           </NavLink>

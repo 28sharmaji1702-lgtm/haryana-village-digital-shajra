@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import BrowseSearch from "../components/BrowseSearch";
+import CoverageSection from "../components/CoverageSection";
 import FilterSection from "../components/FilterSection";
 import DistrictCards from "../components/DistrictCards";
 import VillageGrid from "../components/VillageGrid";
@@ -241,7 +242,8 @@ setSearchResults([]);
 
       <Hero />
 
-      <main className="home-page">
+
+<main className="home-page">
 
         <div className="container">
 

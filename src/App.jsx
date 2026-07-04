@@ -5,7 +5,7 @@ import VillagePage from "./pages/VillagePage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-
+import Coverage from "./pages/Coverage";
 function App() {
   return (
     <Routes>
@@ -25,7 +25,10 @@ function App() {
         path="/contact"
         element={<Contact />}
       />
-
+<Route
+  path="/coverage"
+  element={<Coverage />}
+/>
       <Route
         path="*"
         element={<NotFound />}

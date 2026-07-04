@@ -20,6 +20,35 @@ transition:.25s;
 
 box-shadow:0 10px 25px rgba(15,23,42,.05);
 
+position:relative;
+
+overflow:hidden;
+
+}
+
+.village-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:5px;
+
+background:linear-gradient(
+90deg,
+#16a34a,
+#22c55e,
+#4ade80
+);
+
+transition:.25s;
+
 }
 
 .village-card:hover{
@@ -29,6 +58,17 @@ transform:translateY(-4px);
 border-color:#16a34a;
 
 box-shadow:0 20px 40px rgba(22,163,74,.18);
+
+}
+
+.village-card:hover::before{
+
+background:linear-gradient(
+90deg,
+#15803d,
+#16a34a,
+#22c55e
+);
 
 }
 

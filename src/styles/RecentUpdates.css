@@ -1,0 +1,345 @@
+/* =====================================================
+   Recent Updates
+===================================================== */
+
+.recent-section{
+
+    padding:20px 20px 80px;
+
+    background:#fff;
+
+}
+
+.recent-container{
+
+    max-width:1250px;
+
+    margin:auto;
+
+}
+
+/* =====================================================
+   Live Badge
+===================================================== */
+
+.live-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:28px;
+
+}
+
+.live-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 22px;
+
+    border-radius:999px;
+
+    background:#ecfdf3;
+
+    color:#15803d;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    border:1px solid #bbf7d0;
+
+}
+
+/* =====================================================
+   Header
+===================================================== */
+
+.recent-header{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.recent-header h2{
+
+    margin:0;
+
+    font-size:34px;
+
+    font-weight:800;
+
+    color:#0f172a;
+
+}
+
+.recent-header p{
+
+    margin-top:12px;
+
+    color:#64748b;
+
+    font-size:16px;
+
+}
+
+/* =====================================================
+   Grid
+===================================================== */
+
+.recent-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(330px,1fr)
+        );
+
+    gap:22px;
+
+}
+
+/* =====================================================
+   Card
+===================================================== */
+
+.recent-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:24px;
+
+    background:#fff;
+
+    border:1px solid #e6edf5;
+
+    border-radius:20px;
+
+    text-decoration:none;
+
+    transition:.30s;
+
+    box-shadow:
+        0 10px 25px
+        rgba(15,23,42,.05);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.recent-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #166534,
+        #16a34a,
+        #4ade80
+    );
+
+}
+
+.recent-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#16a34a;
+
+    box-shadow:
+        0 22px 40px
+        rgba(22,163,74,.16);
+
+}
+
+/* =====================================================
+   Left
+===================================================== */
+
+.recent-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.recent-left h3{
+
+    margin:0;
+
+    color:#0f172a;
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+.recent-left span{
+
+    color:#64748b;
+
+    font-size:14px;
+
+}
+
+.recent-left small{
+
+    color:#16a34a;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+/* =====================================================
+   Arrow
+===================================================== */
+
+.recent-right{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#ecfdf3;
+
+    color:#16a34a;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    transition:.30s;
+
+}
+
+.recent-card:hover .recent-right{
+
+    transform:translateX(6px);
+
+}
+
+/* =====================================================
+   Empty
+===================================================== */
+
+.recent-empty{
+
+    grid-column:1/-1;
+
+    padding:60px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:#fff;
+
+    border:1px solid #e6edf5;
+
+    color:#64748b;
+
+}
+
+/* =====================================================
+   Responsive
+===================================================== */
+
+@media(max-width:768px){
+
+.recent-section{
+
+padding:15px 18px 60px;
+
+}
+
+.recent-header h2{
+
+font-size:28px;
+
+}
+
+.recent-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.recent-card{
+
+padding:20px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.recent-header h2{
+
+font-size:24px;
+
+}
+
+.recent-header p{
+
+font-size:14px;
+
+}
+
+.recent-left h3{
+
+font-size:17px;
+
+}
+
+.recent-right{
+
+width:38px;
+
+height:38px;
+
+font-size:18px;
+
+}
+
+}
