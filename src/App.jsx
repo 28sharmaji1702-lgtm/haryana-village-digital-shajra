@@ -1,39 +1,51 @@
 import { Routes, Route } from "react-router-dom";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 import Home from "./pages/Home";
 import VillagePage from "./pages/VillagePage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
 import Coverage from "./pages/Coverage";
+import NotFound from "./pages/NotFound";
+
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
+    <>
+      <ScrollToTop />
 
-      <Route
-        path="/village/:code"
-        element={<VillagePage />}
-      />
+      <Routes>
+        <Route
+          path="/"
+          element={<Home />}
+        />
 
-      <Route
-        path="/about"
-        element={<About />}
-      />
+        <Route
+          path="/village/:code"
+          element={<VillagePage />}
+        />
 
-      <Route
-        path="/contact"
-        element={<Contact />}
-      />
-<Route
-  path="/coverage"
-  element={<Coverage />}
-/>
-      <Route
-        path="*"
-        element={<NotFound />}
-      />
-    </Routes>
+        <Route
+          path="/about"
+          element={<About />}
+        />
+
+        <Route
+          path="/contact"
+          element={<Contact />}
+        />
+
+        <Route
+          path="/coverage"
+          element={<Coverage />}
+        />
+
+        <Route
+          path="*"
+          element={<NotFound />}
+        />
+      </Routes>
+    </>
   );
 }
 

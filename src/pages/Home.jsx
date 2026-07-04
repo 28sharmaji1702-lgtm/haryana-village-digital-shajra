@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import BrowseSearch from "../components/BrowseSearch";
-import CoverageSection from "../components/CoverageSection";
 import FilterSection from "../components/FilterSection";
 import DistrictCards from "../components/DistrictCards";
 import VillageGrid from "../components/VillageGrid";
@@ -137,7 +136,6 @@ setSearchResults([]);
 
     setVillageCounts(counts);
 
-    scrollToVillages();
 
   }
 
@@ -157,19 +155,18 @@ setSearchResults([]);
 
     setVillages(villageList);
 
-    scrollToVillages();
 
   }
 
-  function handleVillageChange(villageCode) {
+ function handleVillageChange(villageCode) {
 
-    setSelectedVillage(villageCode);
+  setSelectedVillage(villageCode);
 
-    if (!villageCode) return;
+  if (!villageCode) return;
 
-    navigate(`/village/${villageCode}`);
+  scrollToVillages();
 
-  }
+}
 
   async function handleSearch(keyword) {
 
@@ -242,7 +239,6 @@ setSearchResults([]);
 
       <Hero />
 
-
 <main className="home-page">
 
         <div className="container">
@@ -274,7 +270,6 @@ setSearchResults([]);
           />
 
           <VillageGrid
-
   title={
     isSearching
       ? "Search Results"
@@ -284,9 +279,12 @@ setSearchResults([]);
   villages={
     isSearching
       ? searchResults
-      : villages
+      : selectedVillage
+        ? villages.filter(
+            (v) => v.code === selectedVillage
+          )
+        : villages
   }
-
 />
 
         </div>
