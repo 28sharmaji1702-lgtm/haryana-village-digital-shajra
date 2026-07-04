@@ -1,3 +1,4 @@
+import { FaInstagram, FaTelegramPlane } from "react-icons/fa";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -90,84 +91,54 @@ function Contact() {
                     <section className="social-grid">
 
                         <a
+    href="https://instagram.com/vishnu__patwari"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-card instagram"
+>
+    <div className="social-icon">
+        <FaInstagram />
+    </div>
 
-                            href="https://instagram.com/"
+    <h3>
+        Instagram
+    </h3>
 
-                            target="_blank"
+    <p>
+        Follow for updates, announcements,
+        and behind-the-scenes development
+        of Haryana Village Digital Shajra.
+    </p>
 
-                            rel="noopener noreferrer"
+    <span>
+        Follow Now
+    </span>
+</a>
 
-                            className="social-card instagram"
+<a
+    href="https://t.me/patwari8120"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-card telegram"
+>
+    <div className="social-icon">
+        <FaTelegramPlane />
+    </div>
 
-                        >
+    <h3>
+        Telegram
+    </h3>
 
-                            <div className="social-icon">
+    <p>
+        Join our Telegram channel
+        for the latest project updates,
+        announcements, and important notices.
+    </p>
 
-                                📷
-
-                            </div>
-
-                            <h3>
-
-                                Instagram
-
-                            </h3>
-
-                            <p>
-
-                                Follow us for updates,
-                                announcements and new
-                                Digital Shajra coverage.
-
-                            </p>
-
-                            <span>
-
-                                Follow Now
-
-                            </span>
-
-                        </a>
-
-                        <a
-
-                            href="https://t.me/"
-
-                            target="_blank"
-
-                            rel="noopener noreferrer"
-
-                            className="social-card telegram"
-
-                        >
-
-                            <div className="social-icon">
-
-                                ✈️
-
-                            </div>
-
-                            <h3>
-
-                                Telegram
-
-                            </h3>
-
-                            <p>
-
-                                Join our Telegram channel
-                                to receive the latest
-                                project updates instantly.
-
-                            </p>
-
-                            <span>
-
-                                Join Channel
-
-                            </span>
-
-                        </a>
+    <span>
+        Chat Now
+    </span>
+</a>
 
                     </section>
 

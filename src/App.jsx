@@ -8,12 +8,12 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Coverage from "./pages/Coverage";
 import NotFound from "./pages/NotFound";
-
+import BackButton from "./components/BackButton";
 function App() {
   return (
     <>
       <ScrollToTop />
-
+ <BackButton />
       <Routes>
         <Route
           path="/"

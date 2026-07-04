@@ -1,0 +1,64 @@
+.global-back-btn{
+
+    position:fixed;
+
+    top:90px;
+
+    left:20px;
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#166534;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+    z-index:9999;
+
+    transition:.25s;
+}
+
+.global-back-btn:hover{
+
+    transform:translateY(-2px);
+
+    background:#14532d;
+
+}
+
+.global-back-btn svg{
+
+    font-size:18px;
+
+}
+
+@media(max-width:768px){
+
+    .global-back-btn{
+
+        top:80px;
+
+        left:14px;
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+}
