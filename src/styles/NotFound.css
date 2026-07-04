@@ -1,0 +1,104 @@
+.not-found-page{
+    min-height:70vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:60px 20px;
+}
+
+.not-found-container{
+    width:100%;
+    max-width:700px;
+    margin:0 auto;
+}
+
+.not-found-card{
+    background:#ffffff;
+    border:1px solid #e6edf5;
+    border-radius:24px;
+    padding:50px 30px;
+    text-align:center;
+    box-shadow:0 12px 36px rgba(15,23,42,.08);
+}
+
+.not-found-card h1{
+    margin:0;
+    font-size:80px;
+    font-weight:800;
+    color:#2563eb;
+    line-height:1;
+}
+
+.not-found-card h2{
+    margin:18px 0 12px;
+    font-size:30px;
+    font-weight:700;
+    color:#0f172a;
+}
+
+.not-found-card p{
+    margin:0 0 28px;
+    color:#64748b;
+    font-size:16px;
+    line-height:1.7;
+}
+
+.not-found-card a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    height:50px;
+    padding:0 28px;
+    border-radius:14px;
+    background:#2563eb;
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.25s;
+}
+
+.not-found-card a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 24px rgba(37,99,235,.25);
+}
+
+@media(max-width:768px){
+
+    .not-found-card{
+        padding:36px 22px;
+    }
+
+    .not-found-card h1{
+        font-size:64px;
+    }
+
+    .not-found-card h2{
+        font-size:26px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .not-found-page{
+        padding:30px 12px;
+    }
+
+    .not-found-card{
+        padding:28px 18px;
+        border-radius:18px;
+    }
+
+    .not-found-card h1{
+        font-size:52px;
+    }
+
+    .not-found-card h2{
+        font-size:22px;
+    }
+
+    .not-found-card p{
+        font-size:14px;
+    }
+
+}

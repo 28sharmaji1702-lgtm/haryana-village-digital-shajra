@@ -1,0 +1,461 @@
+/* ==========================================
+   HOME PAGE
+   Haryana Village Digital Shajra
+========================================== */
+
+.home-section{
+    width:100%;
+    padding:55px 20px 70px;
+}
+
+.container{
+    width:100%;
+    max-width:1320px;
+    margin:0 auto;
+}
+
+.home-section>*+*{
+    margin-top:32px;
+}
+
+/* ===========================
+   Page Fade
+=========================== */
+
+.home-section{
+    animation:fadeIn .35s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:none;
+    }
+
+}
+
+/* ===========================
+   Generic Cards
+=========================== */
+
+.section-card{
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 8px 24px rgba(15,23,42,.06);
+
+    border:1px solid #e8edf4;
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.primary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    height:48px;
+
+    padding:0 24px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-weight:600;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    transition:.25s;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 12px 26px
+    rgba(37,99,235,.30);
+
+}
+
+/* ===========================
+   Secondary Button
+=========================== */
+
+.secondary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:46px;
+
+    padding:0 22px;
+
+    border-radius:14px;
+
+    border:1px solid #d9e4f2;
+
+    background:#fff;
+
+    color:#1e3a8a;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.secondary-btn:hover{
+
+    background:#f8fbff;
+
+}
+
+/* ===========================
+   Loading
+=========================== */
+
+.loading-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:70px 20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 8px 22px
+    rgba(0,0,0,.05);
+
+}
+
+.loading-card h2{
+
+    color:#2563eb;
+
+    font-size:26px;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   Empty State
+=========================== */
+
+.empty-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:60px 30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 8px 24px
+    rgba(0,0,0,.05);
+
+}
+
+.empty-card h2{
+
+    color:#1f2937;
+
+    margin-bottom:14px;
+
+}
+
+.empty-card p{
+
+    color:#64748b;
+
+    line-height:1.7;
+
+}
+
+/* ===========================
+   Utilities
+=========================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-20{
+
+    margin-top:20px;
+
+}
+
+.mt-30{
+
+    margin-top:30px;
+
+}
+
+.mb-20{
+
+    margin-bottom:20px;
+
+}
+
+.mb-40{
+
+    margin-bottom:40px;
+
+}
+/* ==========================================
+   HOME RESPONSIVE
+========================================== */
+
+/* Large Desktop */
+
+@media (max-width:1400px){
+
+    .container{
+        max-width:1200px;
+    }
+
+}
+
+/* Laptop */
+
+@media (max-width:1200px){
+
+    .home-section{
+        padding:48px 18px 64px;
+    }
+
+    .container{
+        max-width:1000px;
+    }
+
+}
+
+/* Tablet */
+
+@media (max-width:992px){
+
+    .home-section{
+        padding:42px 16px 56px;
+    }
+
+    .home-section>*+*{
+        margin-top:26px;
+    }
+
+}
+
+/* Large Mobile */
+
+@media (max-width:768px){
+
+    .container{
+        max-width:100%;
+    }
+
+    .home-section{
+
+        padding:
+        30px
+        14px
+        48px;
+
+    }
+
+    .home-section>*+*{
+        margin-top:22px;
+    }
+
+    .loading-card{
+
+        padding:
+        50px
+        18px;
+
+        border-radius:18px;
+
+    }
+
+    .empty-card{
+
+        padding:
+        45px
+        20px;
+
+        border-radius:18px;
+
+    }
+
+    .loading-card h2{
+
+        font-size:22px;
+
+    }
+
+}
+
+/* Android */
+
+@media (max-width:600px){
+
+    .home-section{
+
+        padding:
+        22px
+        12px
+        40px;
+
+    }
+
+    .home-section>*+*{
+        margin-top:18px;
+    }
+
+    .loading-card{
+
+        padding:
+        40px
+        16px;
+
+    }
+
+    .empty-card{
+
+        padding:
+        36px
+        16px;
+
+    }
+
+}
+
+/* Small Android */
+
+@media (max-width:480px){
+
+    .home-section{
+
+        padding:
+        18px
+        10px
+        34px;
+
+    }
+
+    .home-section>*+*{
+
+        margin-top:16px;
+
+    }
+
+    .loading-card{
+
+        padding:
+        34px
+        14px;
+
+    }
+
+    .loading-card h2{
+
+        font-size:20px;
+
+    }
+
+    .empty-card{
+
+        padding:
+        30px
+        14px;
+
+    }
+
+}
+
+/* Very Small Devices */
+
+@media (max-width:360px){
+
+    .home-section{
+
+        padding:
+        14px
+        8px
+        28px;
+
+    }
+
+}
+
+/* ==========================================
+   Performance
+========================================== */
+
+.container{
+    contain:layout;
+}
+
+.loading-card,
+.empty-card{
+    will-change:transform;
+}
+
+/* ==========================================
+   Safe Area Support
+========================================== */
+
+@supports (padding:max(0px)){
+
+.home-section{
+
+padding-left:max(12px,env(safe-area-inset-left));
+
+padding-right:max(12px,env(safe-area-inset-right));
+
+padding-bottom:max(40px,env(safe-area-inset-bottom));
+
+}
+
+}
+
+/* ==========================================
+   END OF HOME.CSS
+========================================== */

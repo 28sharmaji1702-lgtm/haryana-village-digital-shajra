@@ -1,0 +1,213 @@
+/* ===========================
+   Haryana Village Digital Shajra
+   Global Styles
+=========================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #0f6b3f;
+  --primary-dark: #0b4f2e;
+  --secondary: #f4f7f4;
+  --accent: #f5a623;
+
+  --text: #222222;
+  --text-light: #666666;
+
+  --white: #ffffff;
+  --border: #e5e7eb;
+
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  --radius: 14px;
+
+  --container: 1280px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  color: var(--text);
+  background: #f7f8fa;
+
+  min-width: 320px;
+
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: min(92%, var(--container));
+  margin: auto;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ececec;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0f6b3f;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0b4f2e;
+}
+
+/* Utility */
+
+.section {
+  padding: 70px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 1023px) {
+
+  .container {
+    width: 94%;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .section {
+    padding: 45px 0;
+  }
+
+}
+/* ==========================================
+   Premium Reveal Animation
+========================================== */
+
+.reveal{
+    opacity:0;
+    transform:translate3d(0,80px,0) scale(.98);
+    transition:
+        transform 900ms cubic-bezier(.16,1,.3,1),
+        opacity 900ms cubic-bezier(.16,1,.3,1);
+    will-change:transform,opacity;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translate3d(0,0,0) scale(1);
+}
+
+/* Hero (slightly stronger) */
+
+.reveal-hero{
+    opacity:0;
+    transform:translate3d(0,120px,0) scale(.96);
+    transition:
+        transform 1200ms cubic-bezier(.16,1,.3,1),
+        opacity 1200ms cubic-bezier(.16,1,.3,1);
+    will-change:transform,opacity;
+}
+
+.reveal-hero.show{
+    opacity:1;
+    transform:translate3d(0,0,0) scale(1);
+}
+
+/* Left */
+
+.reveal-left{
+    opacity:0;
+    transform:translate3d(-80px,0,0);
+    transition:
+        transform 900ms cubic-bezier(.16,1,.3,1),
+        opacity 900ms cubic-bezier(.16,1,.3,1);
+}
+
+.reveal-left.show{
+    opacity:1;
+    transform:translate3d(0,0,0);
+}
+
+/* Right */
+
+.reveal-right{
+    opacity:0;
+    transform:translate3d(80px,0,0);
+    transition:
+        transform 900ms cubic-bezier(.16,1,.3,1),
+        opacity 900ms cubic-bezier(.16,1,.3,1);
+}
+
+.reveal-right.show{
+    opacity:1;
+    transform:translate3d(0,0,0);
+}
+
+/* Zoom */
+
+.reveal-scale{
+    opacity:0;
+    transform:scale(.92);
+    transition:
+        transform 800ms cubic-bezier(.16,1,.3,1),
+        opacity 800ms cubic-bezier(.16,1,.3,1);
+}
+
+.reveal-scale.show{
+    opacity:1;
+    transform:scale(1);
+}

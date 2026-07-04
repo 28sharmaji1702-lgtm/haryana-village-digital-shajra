@@ -1,0 +1,708 @@
+/* =====================================================
+   Contact Page
+===================================================== */
+
+.contact-page{
+
+    min-height:100vh;
+
+    padding:30px 0 70px;
+
+    background:#f7f9fc;
+
+}
+
+/* =====================================================
+   Banner
+===================================================== */
+
+.contact-banner{
+
+    position:relative;
+
+    overflow:hidden;
+
+    margin-bottom:40px;
+
+    border-radius:24px;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.12);
+
+}
+
+.contact-banner img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:transform .6s;
+
+}
+
+.contact-banner:hover img{
+
+    transform:scale(1.03);
+
+}
+
+.contact-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:40px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.60),
+            rgba(0,0,0,.10)
+        );
+
+}
+
+.contact-overlay h1{
+
+    margin:0;
+
+    color:#ffffff;
+
+    font-size:48px;
+
+    font-weight:800;
+
+    line-height:1.2;
+
+}
+
+.contact-overlay p{
+
+    margin-top:12px;
+
+    max-width:620px;
+
+    color:rgba(255,255,255,.95);
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+/* =====================================================
+   Contact Card
+===================================================== */
+
+.contact-card{
+
+    background:#ffffff;
+
+    padding:45px;
+
+    margin-bottom:40px;
+
+    border-radius:24px;
+
+    border:1px solid #edf2f7;
+
+    box-shadow:
+        0 8px 24px rgba(15,23,42,.06);
+
+}
+
+.contact-tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    margin-bottom:20px;
+
+    border-radius:999px;
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+.contact-card h2{
+
+    margin:0 0 20px;
+
+    color:#0f172a;
+
+    font-size:34px;
+
+    font-weight:800;
+
+}
+
+.contact-card p{
+
+    margin:0;
+
+    color:#475569;
+
+    font-size:17px;
+
+    line-height:1.9;
+
+}
+/* =====================================================
+   Social Section
+===================================================== */
+
+.social-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+
+    margin-bottom:40px;
+
+}
+
+/* =====================================================
+   Social Card
+===================================================== */
+
+.social-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    padding:36px;
+
+    border-radius:24px;
+
+    transition:
+        transform .35s,
+        box-shadow .35s;
+
+}
+
+.social-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* =====================================================
+   Instagram
+===================================================== */
+
+.instagram{
+
+    background:
+        linear-gradient(
+            135deg,
+            #833AB4 0%,
+            #E1306C 50%,
+            #FCAF45 100%
+        );
+
+    box-shadow:
+        0 18px 40px rgba(225,48,108,.30);
+
+}
+
+.instagram:hover{
+
+    box-shadow:
+        0 28px 55px rgba(225,48,108,.40);
+
+}
+
+/* =====================================================
+   Telegram
+===================================================== */
+
+.telegram{
+
+    background:
+        linear-gradient(
+            135deg,
+            #0088cc,
+            #38bdf8
+        );
+
+    box-shadow:
+        0 18px 40px rgba(0,136,204,.28);
+
+}
+
+.telegram:hover{
+
+    box-shadow:
+        0 28px 55px rgba(0,136,204,.38);
+
+}
+
+/* =====================================================
+   Social Icon
+===================================================== */
+
+.social-icon{
+
+    width:78px;
+
+    height:78px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:24px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(12px);
+
+    font-size:38px;
+
+}
+
+/* =====================================================
+   Text
+===================================================== */
+
+.social-card h3{
+
+    margin:0;
+
+    font-size:30px;
+
+    font-weight:800;
+
+}
+
+.social-card p{
+
+    margin:14px 0 24px;
+
+    font-size:18px;
+
+    opacity:.95;
+
+    word-break:break-word;
+
+}
+
+/* =====================================================
+   Follow Button
+===================================================== */
+
+.social-card span{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    background:#ffffff;
+
+    color:#0f172a;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.social-card:hover span{
+
+    transform:translateY(-2px);
+
+}
+/* =====================================================
+   Stay Connected
+===================================================== */
+
+.stay-connected{
+
+    padding:50px 40px;
+
+    margin-bottom:35px;
+
+    text-align:center;
+
+    border-radius:24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #166534,
+            #22c55e
+        );
+
+    color:#ffffff;
+
+    box-shadow:
+        0 12px 30px rgba(22,101,52,.25);
+
+}
+
+.stay-connected h2{
+
+    margin:0 0 18px;
+
+    font-size:36px;
+
+    font-weight:800;
+
+}
+
+.stay-connected p{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    opacity:.95;
+
+}
+
+/* =====================================================
+   Follow Section
+===================================================== */
+
+.follow-card{
+
+    text-align:center;
+
+    background:#ffffff;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    border:1px solid #edf2f7;
+
+    box-shadow:
+        0 8px 24px rgba(15,23,42,.06);
+
+}
+
+.follow-card h2{
+
+    margin:0 0 18px;
+
+    color:#166534;
+
+    font-size:34px;
+
+    font-weight:800;
+
+}
+
+.follow-card p{
+
+    max-width:720px;
+
+    margin:0 auto;
+
+    color:#475569;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+}
+
+/* =====================================================
+   Tablet
+===================================================== */
+
+@media(max-width:992px){
+
+    .contact-banner img{
+
+        height:240px;
+
+    }
+
+    .contact-overlay h1{
+
+        font-size:38px;
+
+    }
+
+    .contact-overlay p{
+
+        font-size:18px;
+
+    }
+
+}
+
+/* =====================================================
+   Mobile
+===================================================== */
+
+@media(max-width:768px){
+
+    .contact-page{
+
+        padding:20px 0 60px;
+
+    }
+
+    .contact-banner{
+
+        border-radius:18px;
+
+    }
+
+    .contact-banner img{
+
+        height:200px;
+
+    }
+
+    .contact-overlay{
+
+        padding:22px;
+
+    }
+
+    .contact-overlay h1{
+
+        font-size:30px;
+
+    }
+
+    .contact-overlay p{
+
+        font-size:15px;
+
+    }
+
+    .contact-card{
+
+        padding:28px 22px;
+
+    }
+
+    .contact-card h2{
+
+        font-size:28px;
+
+    }
+
+    .contact-card p{
+
+        font-size:15px;
+
+    }
+
+    .social-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .social-card{
+
+        padding:30px 24px;
+
+    }
+
+    .social-icon{
+
+        width:68px;
+
+        height:68px;
+
+        font-size:34px;
+
+    }
+
+    .social-card h3{
+
+        font-size:26px;
+
+    }
+
+    .social-card p{
+
+        font-size:16px;
+
+    }
+
+    .social-card span{
+
+        padding:10px 18px;
+
+        font-size:14px;
+
+    }
+
+    .stay-connected{
+
+        padding:36px 22px;
+
+    }
+
+    .stay-connected h2{
+
+        font-size:28px;
+
+    }
+
+    .stay-connected p{
+
+        font-size:15px;
+
+    }
+
+    .follow-card{
+
+        padding:30px 22px;
+
+    }
+
+    .follow-card h2{
+
+        font-size:28px;
+
+    }
+
+    .follow-card p{
+
+        font-size:15px;
+
+    }
+
+}
+
+/* =====================================================
+   Small Mobile
+===================================================== */
+
+@media(max-width:480px){
+
+    .contact-banner img{
+
+        height:170px;
+
+    }
+
+    .contact-overlay h1{
+
+        font-size:24px;
+
+    }
+
+    .contact-overlay p{
+
+        font-size:14px;
+
+    }
+
+    .contact-card h2{
+
+        font-size:24px;
+
+    }
+
+    .social-card{
+
+        padding:26px 20px;
+
+    }
+
+    .social-icon{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:28px;
+
+    }
+
+    .social-card h3{
+
+        font-size:22px;
+
+    }
+
+    .social-card p{
+
+        font-size:15px;
+
+    }
+
+    .social-card span{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .stay-connected h2,
+
+    .follow-card h2{
+
+        font-size:24px;
+
+    }
+
+    .stay-connected p,
+
+    .follow-card p{
+
+        font-size:14px;
+
+    }
+
+}
