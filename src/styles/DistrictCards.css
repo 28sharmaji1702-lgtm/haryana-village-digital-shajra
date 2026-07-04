@@ -1,3 +1,7 @@
+/* ==========================================
+   District Cards
+========================================== */
+
 .district-section{
     margin-top:42px;
 }
@@ -19,25 +23,41 @@
     font-size:15px;
 }
 
+/* ==========================================
+   Grid
+========================================== */
+
 .district-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
 }
 
+/* ==========================================
+   Card
+========================================== */
+
 .district-card{
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
+
     width:100%;
+
     padding:22px;
-    border:none;
-    border-radius:20px;
-    background:#ffffff;
+
+    background:#fff;
+
     border:1px solid #e5edf5;
+
+    border-radius:20px;
+
     cursor:pointer;
-    transition:.25s;
+
     text-align:left;
+
+    transition:.25s;
+
     box-shadow:0 10px 25px rgba(15,23,42,.05);
 }
 
@@ -48,19 +68,23 @@
 
 .district-card.active{
     background:#16a34a;
-    color:#ffffff;
+    color:#fff;
 }
 
 .district-card.active h3,
 .district-card.active span{
-    color:#ffffff;
+    color:#fff;
+}
+
+.district-content{
+    flex:1;
 }
 
 .district-content h3{
     margin:0;
+    color:#0f172a;
     font-size:22px;
     font-weight:700;
-    color:#0f172a;
 }
 
 .district-content span{
@@ -73,62 +97,224 @@
 .district-arrow{
     width:44px;
     height:44px;
-    border-radius:50%;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
+    border-radius:50%;
+
     background:#ecfdf3;
+
     color:#16a34a;
+
     font-size:24px;
     font-weight:700;
+
+    flex-shrink:0;
 }
 
 .district-card.active .district-arrow{
-    background:#ffffff;
+    background:#fff;
 }
 
-@media(max-width:900px){
+/* ==========================================
+   Laptop
+========================================== */
 
-.district-grid{
-grid-template-columns:repeat(2,1fr);
-}
+@media (max-width:1200px){
 
-}
-
-@media(max-width:768px){
-
-.district-grid{
-display:flex;
-overflow-x:auto;
-gap:16px;
-padding-bottom:8px;
-scrollbar-width:none;
-}
-
-.district-grid::-webkit-scrollbar{
-display:none;
-}
-
-.district-card{
-min-width:240px;
-flex:0 0 auto;
-}
+    .district-grid{
+        gap:18px;
+    }
 
 }
 
-@media(max-width:480px){
+/* ==========================================
+   Tablet
+========================================== */
 
-.section-heading h2{
-font-size:24px;
+@media (max-width:992px){
+
+    .district-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:16px;
+    }
+
 }
 
-.district-card{
-min-width:210px;
-padding:18px;
+/* ==========================================
+   Mobile
+========================================== */
+
+@media (max-width:768px){
+
+    .district-section{
+        margin-top:28px;
+    }
+
+    .section-heading{
+        margin-bottom:16px;
+    }
+
+    .section-heading h2{
+        font-size:24px;
+    }
+
+    .section-heading p{
+        font-size:13px;
+    }
+
+    .district-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:10px;
+
+    }
+
+    .district-card{
+
+        padding:12px;
+
+        min-height:82px;
+
+        border-radius:14px;
+
+    }
+
+    .district-content h3{
+
+        font-size:16px;
+
+        line-height:1.2;
+
+    }
+
+    .district-content span{
+
+        margin-top:4px;
+
+        font-size:11px;
+
+    }
+
+    .district-arrow{
+
+        width:30px;
+
+        height:30px;
+
+        font-size:16px;
+
+    }
+
 }
 
-.district-content h3{
-font-size:18px;
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media (max-width:480px){
+
+    .district-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:8px;
+
+    }
+
+    .section-heading h2{
+
+        font-size:22px;
+
+    }
+
+    .section-heading p{
+
+        font-size:12px;
+
+    }
+
+    .district-card{
+
+        padding:10px;
+
+        min-height:76px;
+
+        border-radius:12px;
+
+    }
+
+    .district-content h3{
+
+        font-size:14px;
+
+        line-height:1.15;
+
+    }
+
+    .district-content span{
+
+        margin-top:3px;
+
+        font-size:10px;
+
+    }
+
+    .district-arrow{
+
+        width:26px;
+
+        height:26px;
+
+        font-size:14px;
+
+    }
+
 }
+
+/* ==========================================
+   Very Small Mobile
+========================================== */
+
+@media (max-width:360px){
+
+    .district-grid{
+
+        gap:8px;
+
+    }
+
+    .district-card{
+
+        padding:9px;
+
+        min-height:72px;
+
+    }
+
+    .district-content h3{
+
+        font-size:13px;
+
+    }
+
+    .district-content span{
+
+        font-size:9px;
+
+    }
+
+    .district-arrow{
+
+        width:24px;
+
+        height:24px;
+
+        font-size:13px;
+
+    }
 
 }

@@ -151,19 +151,18 @@ setVillage(data);
                 <div className="container">
 <section className="banner-section">
 
-    <Link
-        to="/"
-        className="back-btn"
-    >
-        ← Back
-    </Link>
-
     <img
         src={villageBanner}
         alt="Village Banner"
     />
 
     <div className="banner-overlay">
+
+        <span className="village-tag">
+
+            DIGITAL SHAJRA
+
+        </span>
 
         <h1>
 
@@ -179,12 +178,21 @@ setVillage(data);
 
             {village.tehsil}
 
+
         </p>
+
+        <Link
+            to="/"
+            className="hero-back-btn"
+        >
+
+            ← Back to Home
+
+        </Link>
 
     </div>
 
-</section>              
-                    
+</section>      
                     <section className="details-grid">
 
                         <div className="detail-card">

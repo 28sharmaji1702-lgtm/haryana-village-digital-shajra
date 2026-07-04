@@ -6,20 +6,25 @@
 
     min-height:100vh;
 
-    padding:30px 0 70px;
+    padding:0 0 70px;
 
-    background:#f7f9fc;
+    background:
+        linear-gradient(
+            180deg,
+            #f8fffb 0%,
+            #ffffff 100%
+        );
 
 }
 
 /* =====================================================
-   Loading
+   Loading / Not Found
 ===================================================== */
 
 .loading-card,
 .not-found-card{
 
-    background:#fff;
+    background:#ffffff;
 
     border-radius:22px;
 
@@ -27,16 +32,18 @@
 
     text-align:center;
 
+    border:1px solid #e8eef4;
+
     box-shadow:
-        0 10px 35px rgba(0,0,0,.08);
+        0 16px 34px rgba(15,23,42,.06);
 
 }
 
 .loading-spinner{
 
-    width:58px;
+    width:60px;
 
-    height:58px;
+    height:60px;
 
     margin:0 auto 24px;
 
@@ -60,69 +67,86 @@
 
 }
 
-/* =====================================================
-   Back Button
-===================================================== */
+.loading-card h2,
+.not-found-card h2{
 
-.back-btn{
+    margin:0 0 14px;
 
-    position:absolute;
+    color:#0f172a;
 
-    top:18px;
+    font-size:30px;
 
-    left:18px;
+    font-weight:800;
 
-    z-index:5;
+}
 
-    display:flex;
+.not-found-card p{
+
+    color:#64748b;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+}
+
+.back-home-btn{
+
+    display:inline-flex;
 
     align-items:center;
 
     justify-content:center;
 
-    padding:10px 18px;
+    margin-top:24px;
 
-    border-radius:12px;
+    padding:14px 26px;
 
-    background:rgba(255,255,255,.92);
+    border-radius:14px;
 
-    backdrop-filter:blur(10px);
+    background:
+        linear-gradient(
+            135deg,
+            #166534,
+            #22c55e
+        );
 
-    color:#166534;
+    color:#ffffff;
 
     text-decoration:none;
 
     font-weight:700;
 
-    box-shadow:
-        0 8px 24px rgba(0,0,0,.18);
-
     transition:.3s;
 
 }
 
-.back-btn:hover{
+.back-home-btn:hover{
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 
 }
 
 /* =====================================================
-   Banner
+   Premium Hero
 ===================================================== */
 
 .banner-section{
 
     position:relative;
 
+    height:240px;
+
     overflow:hidden;
 
-    margin-bottom:30px;
+    margin-bottom:46px;
 
-    border-radius:24px;
+    border-radius:0 0 28px 28px;
+
+    background:#000;
 
     box-shadow:
-        0 12px 30px rgba(0,0,0,.12);
+        0 18px 42px rgba(0,0,0,.12);
 
 }
 
@@ -130,13 +154,14 @@
 
     width:100%;
 
-    height:260px;
+    height:100%;
 
     object-fit:cover;
 
     display:block;
 
 }
+
 .banner-overlay{
 
     position:absolute;
@@ -147,46 +172,115 @@
 
     flex-direction:column;
 
-    justify-content:flex-end;
+    align-items:center;
 
-    padding:32px;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:20px;
 
     background:
         linear-gradient(
-            to top,
-            rgba(0,0,0,.55),
-            rgba(0,0,0,.05)
+            135deg,
+            rgba(8,42,24,.78),
+            rgba(15,107,63,.50)
         );
+
+}
+
+.village-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.15);
+
+    border:1px solid rgba(255,255,255,.30);
+
+    backdrop-filter:blur(8px);
+
+    color:#ffffff;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
 
 }
 
 .banner-overlay h1{
 
-    margin:0;
+    margin:18px 0 12px;
 
     color:#ffffff;
 
-    font-size:44px;
+    font-size:46px;
 
     font-weight:800;
+
+    line-height:1.1;
 
 }
 
 .banner-overlay p{
 
-    margin-top:8px;
+    margin:0;
 
     color:rgba(255,255,255,.95);
 
-    font-size:18px;
+    font-size:17px;
+
+    line-height:1.8;
 
 }
 
-.banner-overlay span{
+.hero-back-btn{
 
-    opacity:.8;
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-top:24px;
+
+    padding:12px 24px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.16);
+
+    border:1px solid rgba(255,255,255,.30);
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    backdrop-filter:blur(8px);
+
+    transition:.3s;
 
 }
+
+.hero-back-btn:hover{
+
+    background:rgba(255,255,255,.24);
+
+    transform:translateY(-2px);
+
+}
+
 /* =====================================================
    Details Grid
 ===================================================== */
@@ -209,21 +303,22 @@
 
 .detail-card{
 
+    position:relative;
+
+    overflow:hidden;
+
     background:#ffffff;
+
+    border:1px solid #e8eef4;
+
+    border-radius:22px;
 
     padding:28px;
 
-    border-radius:20px;
-
-    border:1px solid #edf2f7;
-
     box-shadow:
-        0 8px 24px rgba(15,23,42,.06);
+        0 14px 34px rgba(15,23,42,.06);
 
-    transition:
-        transform .3s,
-        box-shadow .3s,
-        border-color .3s;
+    transition:.35s;
 
 }
 
@@ -231,10 +326,34 @@
 
     transform:translateY(-6px);
 
-    border-color:#cfe8d8;
+    border-color:#22c55e;
 
     box-shadow:
-        0 18px 40px rgba(15,23,42,.10);
+        0 22px 44px rgba(15,23,42,.10);
+
+}
+
+.detail-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #166534,
+            #22c55e,
+            #4ade80
+        );
 
 }
 
@@ -250,9 +369,9 @@
 
     font-weight:600;
 
-    letter-spacing:.3px;
-
     text-transform:uppercase;
+
+    letter-spacing:.3px;
 
 }
 
@@ -264,17 +383,13 @@
 
     font-size:24px;
 
-    font-weight:700;
+    font-weight:800;
 
     line-height:1.4;
 
     word-break:break-word;
 
 }
-
-/* =====================================================
-   Status
-===================================================== */
 
 .status-available{
 
@@ -287,34 +402,6 @@
     color:#f59e0b !important;
 
 }
-
-/* =====================================================
-   Card Accent
-===================================================== */
-
-.detail-card:nth-child(1){
-
-    border-top:4px solid #16a34a;
-
-}
-
-.detail-card:nth-child(2){
-
-    border-top:4px solid #2563eb;
-
-}
-
-.detail-card:nth-child(3){
-
-    border-top:4px solid #9333ea;
-
-}
-
-.detail-card:nth-child(4){
-
-    border-top:4px solid #f59e0b;
-
-}
 /* =====================================================
    Action Section
 ===================================================== */
@@ -325,13 +412,9 @@
 
     justify-content:center;
 
-    margin-bottom:36px;
+    margin-bottom:34px;
 
 }
-
-/* =====================================================
-   Open Button
-===================================================== */
 
 .open-btn{
 
@@ -351,11 +434,12 @@
 
     border-radius:16px;
 
-    background:linear-gradient(
-        135deg,
-        #166534,
-        #22c55e
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #166534,
+            #22c55e
+        );
 
     color:#ffffff;
 
@@ -366,11 +450,9 @@
     font-weight:700;
 
     box-shadow:
-        0 12px 30px rgba(22,101,52,.28);
+        0 14px 34px rgba(22,101,52,.28);
 
-    transition:
-        transform .3s,
-        box-shadow .3s;
+    transition:.35s;
 
 }
 
@@ -379,13 +461,9 @@
     transform:translateY(-4px);
 
     box-shadow:
-        0 18px 40px rgba(22,101,52,.35);
+        0 20px 42px rgba(22,101,52,.35);
 
 }
-
-/* =====================================================
-   Coming Soon Button
-===================================================== */
 
 .coming-btn{
 
@@ -412,372 +490,37 @@
 }
 
 /* =====================================================
-   Disclaimer
-===================================================== */
-
-.disclaimer{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:22px;
-
-    padding:28px;
-
-    background:#fffdf5;
-
-    border:1px solid #fde68a;
-
-    border-left:6px solid #f59e0b;
-
-    border-radius:20px;
-
-    box-shadow:
-        0 8px 24px rgba(15,23,42,.06);
-
-}
-
-.disclaimer-icon{
-
-    font-size:34px;
-
-    line-height:1;
-
-    flex-shrink:0;
-
-}
-
-.disclaimer-content{
-
-    flex:1;
-
-}
-
-.disclaimer-content h3{
-
-    margin:0 0 10px;
-
-    color:#92400e;
-
-    font-size:24px;
-
-    font-weight:700;
-
-}
-
-.disclaimer-content p{
-
-    margin:0;
-
-    color:#475569;
-
-    font-size:15px;
-
-    line-height:1.8;
-
-}
-/* =====================================================
-   Tablet
-===================================================== */
-
-@media (max-width:992px){
-
-    .banner-section img{
-
-        height:220px;
-
-    }
-
-    .details-grid{
-
-        gap:20px;
-
-    }
-
-}
-
-/* =====================================================
-   Mobile
-===================================================== */
-
-@media (max-width:768px){
-
-    .village-page{
-
-        padding:20px 0 60px;
-
-    }
-
-    .back-btn{
-
-    position:absolute;
-
-    top:18px;
-
-    left:18px;
-
-    z-index:5;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:10px 18px;
-
-    border-radius:12px;
-
-    background:rgba(255,255,255,.92);
-
-    backdrop-filter:blur(12px);
-
-    color:#166534;
-
-    text-decoration:none;
-
-    font-weight:700;
-
-    transition:.3s;
-
-}
-
-.back-btn:hover{
-
-    transform:translateY(-2px);
-
-}
-
-    .banner-section{
-
-        margin-bottom:24px;
-
-    }
-
-    .banner-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:flex-end;
-
-    padding:32px;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(0,0,0,.55),
-            rgba(0,0,0,.05)
-        );
-
-}
-
-.banner-overlay h1{
-
-    margin:0;
-
-    color:#fff;
-
-    font-size:44px;
-
-    font-weight:800;
-
-}
-
-.banner-overlay p{
-
-    margin-top:8px;
-
-    color:rgba(255,255,255,.95);
-
-    font-size:18px;
-
-}
-
-.banner-overlay span{
-
-    opacity:.8;
-
-}
-    .details-grid{
-
-        grid-template-columns:1fr;
-
-        gap:18px;
-
-        margin-bottom:28px;
-
-    }
-
-    .detail-card{
-
-        padding:22px;
-
-        border-radius:16px;
-
-    }
-
-    .detail-card h3{
-
-        font-size:20px;
-
-    }
-
-    .detail-card span{
-
-        font-size:13px;
-
-    }
-
-    .action-section{
-
-        margin-bottom:28px;
-
-    }
-
-    .open-btn,
-    .coming-btn{
-
-        width:100%;
-
-        min-width:unset;
-
-        height:56px;
-
-        font-size:17px;
-
-    }
-
-    .disclaimer{
-
-        flex-direction:column;
-
-        gap:16px;
-
-        padding:22px;
-
-        border-radius:16px;
-
-    }
-
-    .disclaimer-icon{
-
-        font-size:28px;
-
-    }
-
-    .disclaimer-content h3{
-
-        font-size:22px;
-
-    }
-
-    .disclaimer-content p{
-
-        font-size:14px;
-
-        line-height:1.7;
-
-    }
-
-}
-
-/* =====================================================
-   Small Mobile
-===================================================== */
-
-@media (max-width:480px){
-
-   .banner-section img{
-
-    height:180px;
-
-}
-
-.banner-overlay{
-
-    padding:20px;
-
-}
-
-.banner-overlay h1{
-
-    font-size:28px;
-
-}
-
-.banner-overlay p{
-
-    font-size:15px;
-
-}
-
-    .detail-card{
-
-        padding:18px;
-
-    }
-
-    .detail-card h3{
-
-        font-size:18px;
-
-    }
-
-    .open-btn,
-    .coming-btn{
-
-        font-size:16px;
-
-        padding:0 18px;
-
-    }
-
-    .disclaimer-content h3{
-
-        font-size:20px;
-
-    }
-
-}
-/* =====================================================
    Help Card
 ===================================================== */
 
 .help-card{
 
-    margin-top:30px;
-margin-bottom:30px;
-    padding:28px;
+    margin:30px 0;
+
+    padding:30px;
 
     background:#ffffff;
 
-    border-radius:20px;
+    border:1px solid #e8eef4;
 
-    border:1px solid #e2e8f0;
-
-    box-shadow:
-        0 8px 24px rgba(15,23,42,.06);
+    border-radius:22px;
 
     text-align:center;
+
+    box-shadow:
+        0 14px 34px rgba(15,23,42,.06);
 
 }
 
 .help-card h3{
 
-    margin:0 0 12px;
+    margin:0 0 14px;
 
     color:#166534;
 
-    font-size:24px;
+    font-size:28px;
 
-    font-weight:700;
+    font-weight:800;
 
 }
 
@@ -806,5 +549,356 @@ margin-bottom:30px;
 .help-card a:hover{
 
     text-decoration:underline;
+
+}
+
+/* =====================================================
+   Disclaimer
+===================================================== */
+
+.disclaimer{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:24px;
+
+    padding:30px;
+
+    background:#fffdf5;
+
+    border:1px solid #fde68a;
+
+    border-left:6px solid #f59e0b;
+
+    border-radius:22px;
+
+    box-shadow:
+        0 14px 34px rgba(15,23,42,.06);
+
+}
+
+.disclaimer-icon{
+
+    flex-shrink:0;
+
+    font-size:34px;
+
+    line-height:1;
+
+}
+
+.disclaimer-content{
+
+    flex:1;
+
+}
+
+.disclaimer-content h3{
+
+    margin:0 0 12px;
+
+    color:#92400e;
+
+    font-size:24px;
+
+    font-weight:800;
+
+}
+
+.disclaimer-content p{
+
+    margin:0;
+
+    color:#475569;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+/* =====================================================
+   Tablet
+===================================================== */
+
+@media(max-width:992px){
+
+    .banner-section{
+
+        height:210px;
+
+        border-radius:0 0 22px 22px;
+
+    }
+
+    .banner-overlay h1{
+
+        font-size:38px;
+
+    }
+
+    .banner-overlay p{
+
+        font-size:16px;
+
+    }
+
+    .details-grid{
+
+        gap:20px;
+
+    }
+
+}
+/* =====================================================
+   Action Section
+===================================================== */
+
+.action-section{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:34px;
+
+}
+
+.open-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    min-width:340px;
+
+    height:60px;
+
+    padding:0 34px;
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #166534,
+            #22c55e
+        );
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    box-shadow:
+        0 14px 34px rgba(22,101,52,.28);
+
+    transition:.35s;
+
+}
+
+.open-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 20px 42px rgba(22,101,52,.35);
+
+}
+
+.coming-btn{
+
+    min-width:340px;
+
+    height:60px;
+
+    padding:0 34px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#eef2f7;
+
+    color:#64748b;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:not-allowed;
+
+}
+
+/* =====================================================
+   Help Card
+===================================================== */
+
+.help-card{
+
+    margin:30px 0;
+
+    padding:30px;
+
+    background:#ffffff;
+
+    border:1px solid #e8eef4;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:
+        0 14px 34px rgba(15,23,42,.06);
+
+}
+
+.help-card h3{
+
+    margin:0 0 14px;
+
+    color:#166534;
+
+    font-size:28px;
+
+    font-weight:800;
+
+}
+
+.help-card p{
+
+    margin:0;
+
+    color:#475569;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+.help-card a{
+
+    color:#166534;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+}
+
+.help-card a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* =====================================================
+   Disclaimer
+===================================================== */
+
+.disclaimer{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:24px;
+
+    padding:30px;
+
+    background:#fffdf5;
+
+    border:1px solid #fde68a;
+
+    border-left:6px solid #f59e0b;
+
+    border-radius:22px;
+
+    box-shadow:
+        0 14px 34px rgba(15,23,42,.06);
+
+}
+
+.disclaimer-icon{
+
+    flex-shrink:0;
+
+    font-size:34px;
+
+    line-height:1;
+
+}
+
+.disclaimer-content{
+
+    flex:1;
+
+}
+
+.disclaimer-content h3{
+
+    margin:0 0 12px;
+
+    color:#92400e;
+
+    font-size:24px;
+
+    font-weight:800;
+
+}
+
+.disclaimer-content p{
+
+    margin:0;
+
+    color:#475569;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+/* =====================================================
+   Tablet
+===================================================== */
+
+@media(max-width:992px){
+
+    .banner-section{
+
+        height:210px;
+
+        border-radius:0 0 22px 22px;
+
+    }
+
+    .banner-overlay h1{
+
+        font-size:38px;
+
+    }
+
+    .banner-overlay p{
+
+        font-size:16px;
+
+    }
+
+    .details-grid{
+
+        gap:20px;
+
+    }
 
 }

@@ -6,28 +6,37 @@
 
     min-height:100vh;
 
-    padding:30px 0 70px;
+    padding:0 0 70px;
 
-    background:#f7f9fc;
+    background:
+    linear-gradient(
+        180deg,
+        #f8fffb 0%,
+        #ffffff 100%
+    );
 
 }
 
 /* =====================================================
-   Banner
+   Hero Banner
 ===================================================== */
 
 .about-banner{
 
     position:relative;
 
+    height:240px;
+
     overflow:hidden;
 
-    margin-bottom:40px;
+    margin-bottom:46px;
 
-    border-radius:24px;
+    border-radius:0 0 28px 28px;
+
+    background:#000;
 
     box-shadow:
-        0 12px 30px rgba(0,0,0,.12);
+        0 16px 42px rgba(0,0,0,.12);
 
 }
 
@@ -35,7 +44,7 @@
 
     width:100%;
 
-    height:300px;
+    height:100%;
 
     object-fit:cover;
 
@@ -53,38 +62,76 @@
 
     flex-direction:column;
 
-    justify-content:flex-end;
+    align-items:center;
 
-    padding:40px;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:20px;
 
     background:
         linear-gradient(
-            to top,
-            rgba(0,0,0,.60),
-            rgba(0,0,0,.08)
+            135deg,
+            rgba(8,42,24,.78),
+            rgba(15,107,63,.50)
         );
+
+}
+
+.about-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(255,255,255,.30);
+
+    background:rgba(255,255,255,.15);
+
+    color:#ffffff;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    backdrop-filter:blur(8px);
 
 }
 
 .banner-overlay h1{
 
-    margin:0;
+    margin:18px 0 14px;
 
     color:#ffffff;
 
-    font-size:48px;
+    font-size:46px;
 
     font-weight:800;
+
+    line-height:1.1;
 
 }
 
 .banner-overlay p{
 
-    margin-top:12px;
+    max-width:760px;
+
+    margin:0;
 
     color:rgba(255,255,255,.95);
 
-    font-size:20px;
+    font-size:18px;
+
+    line-height:1.8;
 
 }
 
@@ -96,36 +143,27 @@
 
     background:#ffffff;
 
-    padding:45px;
+    border:1px solid #e8eef4;
 
-    margin-bottom:35px;
+    border-radius:22px;
 
-    border-radius:24px;
+    padding:42px;
+
+    margin-bottom:30px;
 
     box-shadow:
-        0 8px 24px rgba(15,23,42,.06);
+        0 14px 34px rgba(15,23,42,.06);
+
+    transition:.35s;
 
 }
 
-.about-tag{
+.about-card:hover{
 
-    display:inline-block;
+    transform:translateY(-5px);
 
-    padding:8px 18px;
-
-    margin-bottom:20px;
-
-    border-radius:999px;
-
-    background:#dcfce7;
-
-    color:#166534;
-
-    font-size:13px;
-
-    font-weight:700;
-
-    letter-spacing:1px;
+    box-shadow:
+        0 24px 42px rgba(15,23,42,.10);
 
 }
 
@@ -138,6 +176,8 @@
     font-size:34px;
 
     font-weight:800;
+
+    line-height:1.2;
 
 }
 
@@ -158,18 +198,17 @@
     margin-bottom:0;
 
 }
-
 /* =====================================================
-   Vision
+   Vision Card
 ===================================================== */
 
 .vision-card{
 
-    padding:55px 35px;
+    padding:52px 34px;
 
     text-align:center;
 
-    border-radius:24px;
+    border-radius:22px;
 
     background:
         linear-gradient(
@@ -181,7 +220,7 @@
     color:#ffffff;
 
     box-shadow:
-        0 12px 30px rgba(22,101,52,.25);
+        0 16px 36px rgba(22,101,52,.22);
 
 }
 
@@ -193,6 +232,8 @@
 
     font-weight:800;
 
+    color:#ffffff;
+
 }
 
 .vision-card p{
@@ -203,7 +244,9 @@
 
     font-size:18px;
 
-    line-height:1.8;
+    line-height:1.85;
+
+    color:rgba(255,255,255,.95);
 
 }
 
@@ -213,9 +256,13 @@
 
 @media(max-width:992px){
 
-    .about-banner img{
+    .about-banner{
 
-        height:240px;
+        height:210px;
+
+        border-radius:0 0 22px 22px;
+
+        margin-bottom:34px;
 
     }
 
@@ -227,7 +274,37 @@
 
     .banner-overlay p{
 
-        font-size:18px;
+        font-size:16px;
+
+    }
+
+    .about-card{
+
+        padding:34px;
+
+    }
+
+    .about-card h2{
+
+        font-size:30px;
+
+    }
+
+    .vision-card{
+
+        padding:42px 28px;
+
+    }
+
+    .vision-card h2{
+
+        font-size:31px;
+
+    }
+
+    .vision-card p{
+
+        font-size:17px;
 
     }
 
@@ -241,29 +318,37 @@
 
     .about-page{
 
-        padding:20px 0 60px;
+        padding:0 0 50px;
 
     }
 
     .about-banner{
 
-        border-radius:18px;
+        height:180px;
+
+        margin-bottom:28px;
+
+        border-radius:0 0 20px 20px;
 
     }
 
-    .about-banner img{
+    .about-tag{
 
-        height:200px;
+        font-size:12px;
+
+        padding:7px 16px;
 
     }
 
     .banner-overlay{
 
-        padding:22px;
+        padding:18px;
 
     }
 
     .banner-overlay h1{
+
+        margin:14px 0 10px;
 
         font-size:30px;
 
@@ -271,43 +356,59 @@
 
     .banner-overlay p{
 
-        font-size:15px;
+        max-width:95%;
+
+        font-size:14px;
+
+        line-height:1.6;
 
     }
 
     .about-card{
 
-        padding:28px 22px;
+        padding:22px 18px;
+
+        margin-bottom:22px;
+
+        border-radius:18px;
 
     }
 
     .about-card h2{
 
-        font-size:28px;
+        font-size:24px;
 
     }
 
     .about-card p{
 
-        font-size:15px;
+        font-size:14px;
+
+        line-height:1.75;
 
     }
 
     .vision-card{
 
-        padding:40px 22px;
+        padding:30px 20px;
+
+        border-radius:18px;
 
     }
 
     .vision-card h2{
 
-        font-size:28px;
+        font-size:24px;
+
+        margin-bottom:14px;
 
     }
 
     .vision-card p{
 
-        font-size:15px;
+        font-size:14px;
+
+        line-height:1.75;
 
     }
 
@@ -319,33 +420,83 @@
 
 @media(max-width:480px){
 
-    .about-banner img{
+    .about-page{
 
-        height:170px;
+        padding:0 0 40px;
+
+    }
+
+    .about-banner{
+
+        height:160px;
+
+        border-radius:0 0 18px 18px;
+
+        margin-bottom:22px;
+
+    }
+
+    .banner-overlay{
+
+        padding:14px;
 
     }
 
     .banner-overlay h1{
 
-        font-size:24px;
+        font-size:25px;
 
     }
 
     .banner-overlay p{
 
-        font-size:14px;
+        font-size:13px;
+
+        line-height:1.55;
+
+    }
+
+    .about-card{
+
+        padding:18px 16px;
+
+        border-radius:16px;
 
     }
 
     .about-card h2{
 
-        font-size:24px;
+        font-size:21px;
+
+    }
+
+    .about-card p{
+
+        font-size:13.5px;
+
+        line-height:1.7;
+
+    }
+
+    .vision-card{
+
+        padding:24px 16px;
+
+        border-radius:16px;
 
     }
 
     .vision-card h2{
 
-        font-size:24px;
+        font-size:21px;
+
+    }
+
+    .vision-card p{
+
+        font-size:13.5px;
+
+        line-height:1.7;
 
     }
 

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import coverageBanner from "../assets/coverage-banner.jpg";
+
 import {
   getCoverage,
 } from "../services/googleSheet";
@@ -54,9 +56,15 @@ function CoverageSection() {
 
       <section className="coverage-section">
 
-        <div className="coverage-container">
+        <section
+          className="coverage-hero"
+          style={{
+            backgroundImage:
+              `url(${coverageBanner})`,
+          }}
+        >
 
-          <div className="coverage-header">
+          <div className="coverage-hero-overlay">
 
             <span className="coverage-badge">
 
@@ -64,21 +72,22 @@ function CoverageSection() {
 
             </span>
 
-            <h2>
+            <h1>
 
               Haryana Digital Coverage
 
-            </h2>
+            </h1>
 
             <p>
 
-              Loading coverage...
+              Loading latest
+              coverage information...
 
             </p>
 
           </div>
 
-        </div>
+        </section>
 
       </section>
 
@@ -120,324 +129,307 @@ function CoverageSection() {
     coverage.digitalCoverage;
 
   return (
+
     <section className="coverage-section">
 
-  <div className="coverage-container">
+      <section
+        className="coverage-hero"
+        style={{
+          backgroundImage:
+            `url(${coverageBanner})`,
+        }}
+      >
 
-    {/* ==========================================
-        Header
-    ========================================== */}
+        <div className="coverage-hero-overlay">
 
-    <div className="coverage-header">
+          <span className="coverage-badge">
 
-      <span className="coverage-badge">
+            Haryana Progress
 
-        Haryana Progress
+          </span>
 
-      </span>
+          <h1>
 
-      <h2>
+            Haryana Digital Coverage
 
-        Haryana Digital Coverage
+          </h1>
 
-      </h2>
+          <p>
 
-      <p>
+            Live progress of districts,
+            tehsils and villages
+            available on Haryana
+            Village Digital Shajra.
 
-        Live progress of districts,
-        tehsils and villages available
-        on Haryana Village Digital Shajra.
-
-      </p>
-
-    </div>
-
-    {/* ==========================================
-        Cards
-    ========================================== */}
-
-    <div className="coverage-grid">
-
-      {/* Districts */}
-
-      <div className="coverage-card">
-
-        <div className="coverage-icon green">
-
-          🏛️
+          </p>
 
         </div>
 
-        <div className="coverage-content">
+      </section>
 
-          <h4>
+      <div className="coverage-container">
 
-            Districts Live
+        <div className="coverage-grid">
 
-          </h4>
+          {/* District */}
 
-          <h3>
+          <div className="coverage-card">
 
-            {coverage.districtsLive}
+            <div className="coverage-icon green">
 
-            <span>
+              🏛️
 
-              /
+            </div>
 
-              {coverage.totalDistricts}
+            <div className="coverage-content">
 
-            </span>
+              <h4>
 
-          </h3>
+                Districts Live
 
-          <div className="progress">
+              </h4>
 
-            <div
+              <h3>
 
-              className="progress-fill green-fill"
+                {coverage.districtsLive}
 
-              style={{
+                <span>
 
-                width:
-                  `${districtPercent}%`
+                  /
 
-              }}
+                  {coverage.totalDistricts}
 
-            />
+                </span>
+
+              </h3>
+
+              <div className="progress">
+
+                <div
+                  className="progress-fill green-fill"
+                  style={{
+                    width:
+                      `${districtPercent}%`,
+                  }}
+                />
+
+              </div>
+
+              <small>
+
+                {districtPercent.toFixed(1)}%
+
+                {" "}Coverage
+
+              </small>
+
+            </div>
 
           </div>
 
-          <small>
+          {/* Tehsil */}
 
-            {districtPercent.toFixed(1)}%
+          <div className="coverage-card">
 
-            Coverage
+            <div className="coverage-icon blue">
 
-          </small>
+              🗺️
 
-        </div>
+            </div>
 
-      </div>
+            <div className="coverage-content">
 
-      {/* ================================= */}
+              <h4>
 
-      <div className="coverage-card">
+                Tehsils Live
 
-        <div className="coverage-icon blue">
+              </h4>
 
-          🗺️
+              <h3>
 
-        </div>
+                {coverage.tehsilsLive}
 
-        <div className="coverage-content">
+                <span>
 
-          <h4>
+                  /
 
-            Tehsils Live
+                  {coverage.totalTehsils}
 
-          </h4>
+                </span>
 
-          <h3>
+              </h3>
 
-            {coverage.tehsilsLive}
+              <div className="progress">
 
-            <span>
+                <div
+                  className="progress-fill blue-fill"
+                  style={{
+                    width:
+                      `${tehsilPercent}%`,
+                  }}
+                />
 
-              /
+              </div>
 
-              {coverage.totalTehsils}
+              <small>
 
-            </span>
+                {tehsilPercent.toFixed(1)}%
 
-          </h3>
+                {" "}Coverage
 
-          <div className="progress">
+              </small>
 
-            <div
+            </div>
 
-              className="progress-fill blue-fill"
+          </div>
+                    {/* Village */}
 
-              style={{
+          <div className="coverage-card">
 
-                width:
-                  `${tehsilPercent}%`
+            <div className="coverage-icon orange">
 
-              }}
+              🏘️
 
-            />
+            </div>
+
+            <div className="coverage-content">
+
+              <h4>
+
+                Villages Live
+
+              </h4>
+
+              <h3>
+
+                {coverage.villagesLive}
+
+                <span>
+
+                  /
+
+                  {coverage.totalVillages}
+
+                </span>
+
+              </h3>
+
+              <div className="progress">
+
+                <div
+                  className="progress-fill orange-fill"
+                  style={{
+                    width:
+                      `${villagePercent}%`,
+                  }}
+                />
+
+              </div>
+
+              <small>
+
+                {villagePercent.toFixed(1)}%
+
+                {" "}Coverage
+
+              </small>
+
+            </div>
 
           </div>
 
-          <small>
+          {/* Overall */}
 
-            {tehsilPercent.toFixed(1)}%
+          <div className="coverage-card overall-card">
 
-            Coverage
+            <div className="coverage-icon purple">
 
-          </small>
+              📈
 
-        </div>
+            </div>
 
-      </div>
+            <div className="coverage-content">
 
-      {/* ================================= */}
+              <h4>
 
-      <div className="coverage-card">
+                Digital Coverage
 
-        <div className="coverage-icon orange">
+              </h4>
 
-          🏘️
+              <h3>
 
-        </div>
+                {overall.toFixed(1)}%
 
-        <div className="coverage-content">
+              </h3>
 
-          <h4>
+              <div className="progress">
 
-            Villages Live
+                <div
+                  className="progress-fill purple-fill"
+                  style={{
+                    width:
+                      `${overall}%`,
+                  }}
+                />
 
-          </h4>
+              </div>
 
-          <h3>
+              <small>
 
-            {coverage.villagesLive}
+                Live Google Sheet Data
 
-            <span>
+              </small>
 
-              /
-
-              {coverage.totalVillages}
-
-            </span>
-
-          </h3>
-
-          <div className="progress">
-
-            <div
-
-              className="progress-fill orange-fill"
-
-              style={{
-
-                width:
-                  `${villagePercent}%`
-
-              }}
-
-            />
+            </div>
 
           </div>
 
-          <small>
-
-            {villagePercent.toFixed(1)}%
-
-            Coverage
-
-          </small>
-
         </div>
 
-      </div>
+        {/* Summary */}
 
-      {/* ================================= */}
+        <div className="coverage-summary">
 
-      <div className="coverage-card overall-card">
+          <div className="summary-left">
 
-        <div className="coverage-icon purple">
+            <h3>
 
-          📈
+              Project Status
 
-        </div>
+            </h3>
 
-        <div className="coverage-content">
+            <p>
 
-          <h4>
+              Haryana Village Digital
+              Shajra is continuously
+              expanding.
 
-            Digital Coverage
+              Coverage updates
+              automatically whenever
+              new villages are added
+              to the Google Sheet.
 
-          </h4>
-
-          <h3>
-
-            {overall.toFixed(1)}%
-
-          </h3>
-
-          <div className="progress">
-
-            <div
-
-              className="progress-fill purple-fill"
-
-              style={{
-
-                width:
-                  `${overall}%`
-
-              }}
-
-            />
+            </p>
 
           </div>
 
-          <small>
+          <div className="summary-right">
 
-            Live Google Sheet Data
+            <button>
 
-          </small>
+              Live Data
+
+            </button>
+
+          </div>
 
         </div>
 
       </div>
 
-    </div>
+    </section>
 
-    {/* ==========================================
-        Bottom
-    ========================================== */}
-
-    <div className="coverage-summary">
-
-      <div className="summary-left">
-
-        <h3>
-
-          Project Status
-
-        </h3>
-
-        <p>
-
-          Haryana Village Digital
-          Shajra is continuously
-          expanding. Coverage updates
-          automatically whenever new
-          villages are added to the
-          database.
-
-        </p>
-
-      </div>
-
-      <div className="summary-right">
-
-        <button>
-
-          Live Data
-
-        </button>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-);
+  );
 
 }
 

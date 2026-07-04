@@ -1,8 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-import { FaInstagram, FaTelegramPlane } from "react-icons/fa";
-
 import contactBanner from "../assets/contact-banner.jpg";
 
 import "../styles/Contact.css";
@@ -17,83 +15,95 @@ function Contact() {
 
             <main className="contact-page">
 
-                <div className="container">
+                {/* ==========================================
+                    Hero Banner
+                ========================================== */}
 
-                    {/* ==========================
-                        Banner
-                    =========================== */}
+                <section className="contact-banner">
 
-                    <section className="contact-banner">
+                    <img
+                        src={contactBanner}
+                        alt="Contact Haryana Village Digital Shajra"
+                    />
 
-                        <img
-                            src={contactBanner}
-                            alt="Contact Haryana Village Digital Shajra"
-                        />
-
-                        <div className="contact-overlay">
-
-                            <h1>
-
-                                Contact Us
-
-                            </h1>
-
-                            <p>
-
-                                Have a question, suggestion or feedback?
-                                We'd love to hear from you.
-
-                            </p>
-
-                        </div>
-
-                    </section>
-
-                    {/* ==========================
-                        Contact Intro
-                    =========================== */}
-
-                    <section className="contact-card">
+                    <div className="contact-overlay">
 
                         <span className="contact-tag">
 
-                            GET IN TOUCH
+                            CONTACT US
 
                         </span>
 
+                        <h1>
+
+                            Contact Us
+
+                        </h1>
+
+                        <p>
+
+                            Connect with Haryana Village Digital
+                            Shajra through our official social
+                            platforms for updates, announcements
+                            and project information.
+
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <div className="container">
+
+                    {/* ==========================================
+                        Contact
+                    ========================================== */}
+
+                    <section className="contact-card">
+
                         <h2>
 
-                            Connect With Us
+                            Get in Touch
 
                         </h2>
 
                         <p>
 
-                            If you have any questions, suggestions or
-                            feedback regarding Haryana Village Digital
-                            Shajra, feel free to connect with us through
-                            our official social platforms below.
+                            Haryana Village Digital Shajra is
+                            continuously improving to make
+                            Digital Shajra easily accessible
+                            across Haryana.
+
+                            If you have suggestions, feedback,
+                            corrections or project-related
+                            queries, feel free to connect with
+                            us using the platforms below.
 
                         </p>
 
                     </section>
 
-                    {/* ==========================
-                        Social Cards
-                    =========================== */}
+                    {/* ==========================================
+                        Social Links
+                    ========================================== */}
 
                     <section className="social-grid">
 
                         <a
-                            href="https://instagram.com/vishnu__patwari"
+
+                            href="https://instagram.com/"
+
                             target="_blank"
+
                             rel="noopener noreferrer"
+
                             className="social-card instagram"
+
                         >
 
                             <div className="social-icon">
 
-                                <FaInstagram />
+                                📷
 
                             </div>
 
@@ -105,28 +115,35 @@ function Contact() {
 
                             <p>
 
-                                @vishnu__patwari
+                                Follow us for updates,
+                                announcements and new
+                                Digital Shajra coverage.
 
                             </p>
 
                             <span>
 
-                                Follow on Instagram →
+                                Follow Now
 
                             </span>
 
                         </a>
 
                         <a
-                            href="https://t.me/patwari8120"
+
+                            href="https://t.me/"
+
                             target="_blank"
+
                             rel="noopener noreferrer"
+
                             className="social-card telegram"
+
                         >
 
                             <div className="social-icon">
 
-                                <FaTelegramPlane />
+                                ✈️
 
                             </div>
 
@@ -138,13 +155,15 @@ function Contact() {
 
                             <p>
 
-                                @patwari8120
+                                Join our Telegram channel
+                                to receive the latest
+                                project updates instantly.
 
                             </p>
 
                             <span>
 
-                                Join Telegram →
+                                Join Channel
 
                             </span>
 
@@ -152,9 +171,9 @@ function Contact() {
 
                     </section>
 
-                    {/* ==========================
+                    {/* ==========================================
                         Stay Connected
-                    =========================== */}
+                    ========================================== */}
 
                     <section className="stay-connected">
 
@@ -166,10 +185,39 @@ function Contact() {
 
                         <p>
 
-                            Follow us on Instagram or join our Telegram
-                            channel to receive updates about newly
-                            available Digital Shajra maps, portal
-                            improvements and important announcements.
+                            We are continuously expanding
+                            Haryana Village Digital Shajra.
+
+                            Stay connected through our
+                            official social platforms to
+                            receive the latest updates
+                            and newly added villages.
+
+                        </p>
+
+                    </section>
+
+                    {/* ==========================================
+                        Follow
+                    ========================================== */}
+
+                    <section className="follow-card">
+
+                        <h2>
+
+                            Thank You
+
+                        </h2>
+
+                        <p>
+
+                            Thank you for visiting
+                            Haryana Village Digital
+                            Shajra.
+
+                            Your support and valuable
+                            feedback help us improve
+                            this platform for everyone.
 
                         </p>
 

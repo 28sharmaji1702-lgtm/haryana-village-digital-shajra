@@ -6,28 +6,37 @@
 
     min-height:100vh;
 
-    padding:30px 0 70px;
+    padding:0 0 70px;
 
-    background:#f7f9fc;
+    background:
+        linear-gradient(
+            180deg,
+            #f8fffb 0%,
+            #ffffff 100%
+        );
 
 }
 
 /* =====================================================
-   Banner
+   Hero Banner
 ===================================================== */
 
 .contact-banner{
 
     position:relative;
 
+    height:240px;
+
     overflow:hidden;
 
-    margin-bottom:40px;
+    margin-bottom:46px;
 
-    border-radius:24px;
+    border-radius:0 0 28px 28px;
+
+    background:#000;
 
     box-shadow:
-        0 12px 30px rgba(0,0,0,.12);
+        0 16px 42px rgba(0,0,0,.12);
 
 }
 
@@ -35,19 +44,11 @@
 
     width:100%;
 
-    height:300px;
+    height:100%;
 
     object-fit:cover;
 
     display:block;
-
-    transition:transform .6s;
-
-}
-
-.contact-banner:hover img{
-
-    transform:scale(1.03);
 
 }
 
@@ -61,42 +62,74 @@
 
     flex-direction:column;
 
-    justify-content:flex-end;
+    align-items:center;
 
-    padding:40px;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:20px;
 
     background:
         linear-gradient(
-            to top,
-            rgba(0,0,0,.60),
-            rgba(0,0,0,.10)
+            135deg,
+            rgba(8,42,24,.78),
+            rgba(15,107,63,.50)
         );
+
+}
+
+.contact-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(255,255,255,.30);
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(8px);
+
+    color:#ffffff;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
 
 }
 
 .contact-overlay h1{
 
-    margin:0;
+    margin:18px 0 14px;
 
     color:#ffffff;
 
-    font-size:48px;
+    font-size:46px;
 
     font-weight:800;
 
-    line-height:1.2;
+    line-height:1.1;
 
 }
 
 .contact-overlay p{
 
-    margin-top:12px;
+    max-width:760px;
 
-    max-width:620px;
+    margin:0;
 
     color:rgba(255,255,255,.95);
 
-    font-size:20px;
+    font-size:18px;
 
     line-height:1.8;
 
@@ -110,44 +143,33 @@
 
     background:#ffffff;
 
-    padding:45px;
+    border:1px solid #e8eef4;
 
-    margin-bottom:40px;
+    border-radius:22px;
 
-    border-radius:24px;
+    padding:42px;
 
-    border:1px solid #edf2f7;
+    margin-bottom:34px;
 
     box-shadow:
-        0 8px 24px rgba(15,23,42,.06);
+        0 14px 34px rgba(15,23,42,.06);
+
+    transition:.35s;
 
 }
 
-.contact-tag{
+.contact-card:hover{
 
-    display:inline-block;
+    transform:translateY(-5px);
 
-    padding:8px 18px;
-
-    margin-bottom:20px;
-
-    border-radius:999px;
-
-    background:#dcfce7;
-
-    color:#166534;
-
-    font-size:13px;
-
-    font-weight:700;
-
-    letter-spacing:1px;
+    box-shadow:
+        0 22px 42px rgba(15,23,42,.10);
 
 }
 
 .contact-card h2{
 
-    margin:0 0 20px;
+    margin:0 0 18px;
 
     color:#0f172a;
 
@@ -168,8 +190,9 @@
     line-height:1.9;
 
 }
+
 /* =====================================================
-   Social Section
+   Social Grid
 ===================================================== */
 
 .social-grid{
@@ -178,9 +201,9 @@
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:28px;
+    gap:24px;
 
-    margin-bottom:40px;
+    margin-bottom:34px;
 
 }
 
@@ -204,51 +227,36 @@
 
     color:#ffffff;
 
-    padding:36px;
+    padding:32px;
 
-    border-radius:24px;
+    border-radius:22px;
 
     transition:
-        transform .35s,
-        box-shadow .35s;
+        transform .30s,
+        box-shadow .30s;
 
 }
 
 .social-card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-6px);
 
 }
-
-/* =====================================================
-   Instagram
-===================================================== */
 
 .instagram{
 
     background:
         linear-gradient(
             135deg,
-            #833AB4 0%,
-            #E1306C 50%,
-            #FCAF45 100%
+            #833AB4,
+            #E1306C,
+            #FCAF45
         );
 
     box-shadow:
-        0 18px 40px rgba(225,48,108,.30);
+        0 16px 36px rgba(225,48,108,.28);
 
 }
-
-.instagram:hover{
-
-    box-shadow:
-        0 28px 55px rgba(225,48,108,.40);
-
-}
-
-/* =====================================================
-   Telegram
-===================================================== */
 
 .telegram{
 
@@ -260,28 +268,17 @@
         );
 
     box-shadow:
-        0 18px 40px rgba(0,136,204,.28);
+        0 16px 36px rgba(0,136,204,.28);
 
 }
-
-.telegram:hover{
-
-    box-shadow:
-        0 28px 55px rgba(0,136,204,.38);
-
-}
-
-/* =====================================================
-   Social Icon
-===================================================== */
 
 .social-icon{
 
-    width:78px;
+    width:74px;
 
-    height:78px;
+    height:74px;
 
-    border-radius:20px;
+    border-radius:18px;
 
     display:flex;
 
@@ -289,25 +286,21 @@
 
     justify-content:center;
 
-    margin-bottom:24px;
+    margin-bottom:22px;
 
     background:rgba(255,255,255,.18);
 
-    backdrop-filter:blur(12px);
+    backdrop-filter:blur(10px);
 
-    font-size:38px;
+    font-size:36px;
 
 }
-
-/* =====================================================
-   Text
-===================================================== */
 
 .social-card h3{
 
     margin:0;
 
-    font-size:30px;
+    font-size:28px;
 
     font-weight:800;
 
@@ -315,19 +308,15 @@
 
 .social-card p{
 
-    margin:14px 0 24px;
+    margin:14px 0 22px;
 
-    font-size:18px;
+    font-size:17px;
 
-    opacity:.95;
+    line-height:1.75;
 
-    word-break:break-word;
+    opacity:.96;
 
 }
-
-/* =====================================================
-   Follow Button
-===================================================== */
 
 .social-card span{
 
@@ -349,14 +338,6 @@
 
     font-weight:700;
 
-    transition:.3s;
-
-}
-
-.social-card:hover span{
-
-    transform:translateY(-2px);
-
 }
 /* =====================================================
    Stay Connected
@@ -364,13 +345,13 @@
 
 .stay-connected{
 
-    padding:50px 40px;
+    padding:46px 34px;
 
-    margin-bottom:35px;
+    margin-bottom:34px;
 
     text-align:center;
 
-    border-radius:24px;
+    border-radius:22px;
 
     background:
         linear-gradient(
@@ -382,15 +363,15 @@
     color:#ffffff;
 
     box-shadow:
-        0 12px 30px rgba(22,101,52,.25);
+        0 14px 34px rgba(22,101,52,.22);
 
 }
 
 .stay-connected h2{
 
-    margin:0 0 18px;
+    margin:0 0 16px;
 
-    font-size:36px;
+    font-size:34px;
 
     font-weight:800;
 
@@ -402,16 +383,16 @@
 
     margin:0 auto;
 
-    font-size:18px;
+    font-size:17px;
 
-    line-height:1.9;
+    line-height:1.85;
 
-    opacity:.95;
+    opacity:.96;
 
 }
 
 /* =====================================================
-   Follow Section
+   Follow Card
 ===================================================== */
 
 .follow-card{
@@ -420,14 +401,14 @@
 
     background:#ffffff;
 
-    padding:40px;
+    padding:38px;
 
-    border-radius:24px;
+    border-radius:22px;
 
-    border:1px solid #edf2f7;
+    border:1px solid #e8eef4;
 
     box-shadow:
-        0 8px 24px rgba(15,23,42,.06);
+        0 14px 34px rgba(15,23,42,.06);
 
 }
 
@@ -463,9 +444,11 @@
 
 @media(max-width:992px){
 
-    .contact-banner img{
+    .contact-banner{
 
-        height:240px;
+        height:210px;
+
+        border-radius:0 0 22px 22px;
 
     }
 
@@ -477,7 +460,13 @@
 
     .contact-overlay p{
 
-        font-size:18px;
+        font-size:16px;
+
+    }
+
+    .contact-card{
+
+        padding:34px;
 
     }
 
@@ -491,29 +480,37 @@
 
     .contact-page{
 
-        padding:20px 0 60px;
+        padding:0 0 48px;
 
     }
 
     .contact-banner{
 
-        border-radius:18px;
+        height:180px;
 
-    }
+        margin-bottom:28px;
 
-    .contact-banner img{
-
-        height:200px;
+        border-radius:0 0 20px 20px;
 
     }
 
     .contact-overlay{
 
-        padding:22px;
+        padding:18px;
+
+    }
+
+    .contact-tag{
+
+        padding:7px 16px;
+
+        font-size:12px;
 
     }
 
     .contact-overlay h1{
+
+        margin:14px 0 10px;
 
         font-size:30px;
 
@@ -521,25 +518,35 @@
 
     .contact-overlay p{
 
-        font-size:15px;
+        max-width:95%;
+
+        font-size:14px;
+
+        line-height:1.6;
 
     }
 
     .contact-card{
 
-        padding:28px 22px;
+        padding:22px 18px;
+
+        margin-bottom:24px;
+
+        border-radius:18px;
 
     }
 
     .contact-card h2{
 
-        font-size:28px;
+        font-size:24px;
 
     }
 
     .contact-card p{
 
-        font-size:15px;
+        font-size:14px;
+
+        line-height:1.75;
 
     }
 
@@ -547,123 +554,27 @@
 
         grid-template-columns:1fr;
 
-    }
-
-    .social-card{
-
-        padding:30px 24px;
-
-    }
-
-    .social-icon{
-
-        width:68px;
-
-        height:68px;
-
-        font-size:34px;
-
-    }
-
-    .social-card h3{
-
-        font-size:26px;
-
-    }
-
-    .social-card p{
-
-        font-size:16px;
-
-    }
-
-    .social-card span{
-
-        padding:10px 18px;
-
-        font-size:14px;
-
-    }
-
-    .stay-connected{
-
-        padding:36px 22px;
-
-    }
-
-    .stay-connected h2{
-
-        font-size:28px;
-
-    }
-
-    .stay-connected p{
-
-        font-size:15px;
-
-    }
-
-    .follow-card{
-
-        padding:30px 22px;
-
-    }
-
-    .follow-card h2{
-
-        font-size:28px;
-
-    }
-
-    .follow-card p{
-
-        font-size:15px;
-
-    }
-
-}
-
-/* =====================================================
-   Small Mobile
-===================================================== */
-
-@media(max-width:480px){
-
-    .contact-banner img{
-
-        height:170px;
-
-    }
-
-    .contact-overlay h1{
-
-        font-size:24px;
-
-    }
-
-    .contact-overlay p{
-
-        font-size:14px;
-
-    }
-
-    .contact-card h2{
-
-        font-size:24px;
+        gap:18px;
 
     }
 
     .social-card{
 
-        padding:26px 20px;
+        padding:22px 18px;
+
+        border-radius:18px;
 
     }
 
     .social-icon{
 
-        width:60px;
+        width:58px;
 
-        height:60px;
+        height:58px;
+
+        border-radius:16px;
+
+        margin-bottom:16px;
 
         font-size:28px;
 
@@ -677,7 +588,9 @@
 
     .social-card p{
 
-        font-size:15px;
+        margin:10px 0 18px;
+
+        font-size:14px;
 
     }
 
@@ -687,9 +600,41 @@
 
         justify-content:center;
 
+        padding:11px;
+
+        font-size:14px;
+
     }
 
-    .stay-connected h2,
+    .stay-connected{
+
+        padding:30px 20px;
+
+        border-radius:18px;
+
+    }
+
+    .stay-connected h2{
+
+        font-size:24px;
+
+    }
+
+    .stay-connected p{
+
+        font-size:14px;
+
+        line-height:1.75;
+
+    }
+
+    .follow-card{
+
+        padding:24px 18px;
+
+        border-radius:18px;
+
+    }
 
     .follow-card h2{
 
@@ -697,11 +642,145 @@
 
     }
 
+    .follow-card p{
+
+        font-size:14px;
+
+        line-height:1.75;
+
+    }
+
+}
+
+/* =====================================================
+   Small Mobile
+===================================================== */
+
+@media(max-width:480px){
+
+    .contact-page{
+
+        padding:0 0 40px;
+
+    }
+
+    .contact-banner{
+
+        height:160px;
+
+        border-radius:0 0 18px 18px;
+
+    }
+
+    .contact-overlay{
+
+        padding:14px;
+
+    }
+
+    .contact-overlay h1{
+
+        font-size:25px;
+
+    }
+
+    .contact-overlay p{
+
+        font-size:13px;
+
+        line-height:1.55;
+
+    }
+
+    .contact-card{
+
+        padding:18px 16px;
+
+        border-radius:16px;
+
+    }
+
+    .contact-card h2{
+
+        font-size:21px;
+
+    }
+
+    .contact-card p{
+
+        font-size:13.5px;
+
+        line-height:1.7;
+
+    }
+
+    .social-card{
+
+        padding:18px 16px;
+
+        border-radius:16px;
+
+    }
+
+    .social-icon{
+
+        width:52px;
+
+        height:52px;
+
+        font-size:24px;
+
+    }
+
+    .social-card h3{
+
+        font-size:20px;
+
+    }
+
+    .social-card p{
+
+        font-size:13.5px;
+
+    }
+
+    .social-card span{
+
+        font-size:13px;
+
+    }
+
+    .stay-connected{
+
+        padding:24px 16px;
+
+        border-radius:16px;
+
+    }
+
+    .stay-connected h2,
+
+    .follow-card h2{
+
+        font-size:21px;
+
+    }
+
     .stay-connected p,
 
     .follow-card p{
 
-        font-size:14px;
+        font-size:13.5px;
+
+        line-height:1.7;
+
+    }
+
+    .follow-card{
+
+        padding:20px 16px;
+
+        border-radius:16px;
 
     }
 

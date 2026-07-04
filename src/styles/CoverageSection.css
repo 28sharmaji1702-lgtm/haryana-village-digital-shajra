@@ -1,10 +1,10 @@
 /* =====================================================
-   Coverage Section
+   Coverage Hero
 ===================================================== */
 
 .coverage-section{
 
-    padding:90px 20px;
+    padding:0 20px 80px;
 
     background:
     linear-gradient(
@@ -15,25 +15,101 @@
 
 }
 
+.coverage-hero{
+
+    position:relative;
+
+    height:240px;
+
+    margin-bottom:46px;
+
+    border-radius:0 0 28px 28px;
+
+    overflow:hidden;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-size:cover;
+
+}
+
+.coverage-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.48),
+        rgba(0,0,0,.48)
+    );
+
+}
+
+.coverage-hero-overlay{
+
+    position:relative;
+
+    z-index:2;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    color:#fff;
+
+    padding:20px;
+
+}
+
+.coverage-hero h1{
+
+    margin:16px 0 12px;
+
+    font-size:46px;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+}
+
+.coverage-hero p{
+
+    max-width:720px;
+
+    margin:0;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
 .coverage-container{
 
-    max-width:1250px;
+    max-width:1240px;
 
     margin:auto;
 
 }
 
 /* =====================================================
-   Header
+   Badge
 ===================================================== */
-
-.coverage-header{
-
-    text-align:center;
-
-    margin-bottom:55px;
-
-}
 
 .coverage-badge{
 
@@ -43,72 +119,40 @@
 
     justify-content:center;
 
-    padding:9px 18px;
+    padding:8px 18px;
 
     border-radius:999px;
 
-    background:#ecfdf3;
+    background:rgba(255,255,255,.15);
 
-    color:#15803d;
+    border:1px solid rgba(255,255,255,.28);
+
+    backdrop-filter:blur(8px);
+
+    color:#fff;
 
     font-size:13px;
 
     font-weight:700;
 
-    letter-spacing:.4px;
-
-    margin-bottom:18px;
-
-}
-
-.coverage-header h2{
-
-    margin:0;
-
-    font-size:42px;
-
-    font-weight:800;
-
-    color:#0f172a;
-
-    line-height:1.15;
-
-}
-
-.coverage-header p{
-
-    max-width:720px;
-
-    margin:18px auto 0;
-
-    color:#64748b;
-
-    font-size:17px;
-
-    line-height:1.8;
-
 }
 
 /* =====================================================
-   Statistics Grid
+   Cards Grid
 ===================================================== */
 
 .coverage-grid{
 
     display:grid;
 
-    grid-template-columns:
-        repeat(
-            4,
-            1fr
-        );
+    grid-template-columns:repeat(4,1fr);
 
-    gap:28px;
+    gap:24px;
 
 }
 
 /* =====================================================
-   Cards
+   Card
 ===================================================== */
 
 .coverage-card{
@@ -119,15 +163,14 @@
 
     background:#fff;
 
-    border-radius:24px;
+    border:1px solid #e8eef4;
+
+    border-radius:22px;
 
     padding:28px;
 
-    border:1px solid #e8eef4;
-
     box-shadow:
-    0 18px 40px
-    rgba(15,23,42,.06);
+        0 14px 35px rgba(15,23,42,.06);
 
     transition:.35s;
 
@@ -135,19 +178,14 @@
 
 .coverage-card:hover{
 
-    transform:translateY(-8px);
-
-    box-shadow:
-    0 28px 60px
-    rgba(22,163,74,.18);
+    transform:translateY(-6px);
 
     border-color:#22c55e;
 
-}
+    box-shadow:
+        0 22px 46px rgba(22,163,74,.16);
 
-/* =====================================================
-   Premium Top Line
-===================================================== */
+}
 
 .coverage-card::before{
 
@@ -161,18 +199,15 @@
 
     width:100%;
 
-    height:6px;
+    height:5px;
 
     background:
-    linear-gradient(
-        90deg,
-        #14532d,
-        #166534,
-        #15803d,
-        #16a34a,
-        #22c55e,
-        #4ade80
-    );
+        linear-gradient(
+            90deg,
+            #166534,
+            #16a34a,
+            #4ade80
+        );
 
 }
 
@@ -182,9 +217,9 @@
 
 .coverage-icon{
 
-    width:68px;
+    width:66px;
 
-    height:68px;
+    height:66px;
 
     border-radius:18px;
 
@@ -194,9 +229,9 @@
 
     justify-content:center;
 
-    font-size:32px;
+    margin-bottom:20px;
 
-    margin-bottom:22px;
+    font-size:30px;
 
 }
 
@@ -223,7 +258,6 @@
     background:#f5f3ff;
 
 }
-
 /* =====================================================
    Content
 ===================================================== */
@@ -242,11 +276,11 @@
 
 .coverage-content h3{
 
-    margin:14px 0;
-
-    font-size:38px;
+    margin:12px 0;
 
     color:#0f172a;
+
+    font-size:36px;
 
     font-weight:800;
 
@@ -254,13 +288,13 @@
 
 .coverage-content h3 span{
 
+    margin-left:4px;
+
     color:#94a3b8;
 
-    font-size:22px;
+    font-size:20px;
 
     font-weight:600;
-
-    margin-left:4px;
 
 }
 
@@ -277,23 +311,24 @@
     font-weight:600;
 
 }
+
 /* =====================================================
-   Progress Bars
+   Progress
 ===================================================== */
 
 .progress{
 
     width:100%;
 
-    height:10px;
+    height:9px;
 
-    background:#edf2f7;
-
-    border-radius:999px;
+    margin-top:18px;
 
     overflow:hidden;
 
-    margin-top:18px;
+    border-radius:999px;
+
+    background:#edf2f7;
 
 }
 
@@ -303,16 +338,17 @@
 
     border-radius:999px;
 
-    transition:width 1.4s ease;
+    transition:width 1.2s ease;
 
 }
 
 .green-fill{
 
-    background:linear-gradient(
+    background:
+    linear-gradient(
         90deg,
         #166534,
-        #16a34a,
+        #22c55e,
         #4ade80
     );
 
@@ -320,7 +356,8 @@
 
 .blue-fill{
 
-    background:linear-gradient(
+    background:
+    linear-gradient(
         90deg,
         #1d4ed8,
         #2563eb,
@@ -331,7 +368,8 @@
 
 .orange-fill{
 
-    background:linear-gradient(
+    background:
+    linear-gradient(
         90deg,
         #c2410c,
         #ea580c,
@@ -342,7 +380,8 @@
 
 .purple-fill{
 
-    background:linear-gradient(
+    background:
+    linear-gradient(
         90deg,
         #6d28d9,
         #7c3aed,
@@ -357,26 +396,26 @@
 
 .coverage-summary{
 
-    margin-top:55px;
-
-    background:#fff;
-
-    border:1px solid #e7edf4;
-
-    border-radius:26px;
-
-    padding:38px;
+    margin-top:46px;
 
     display:flex;
 
-    justify-content:space-between;
-
     align-items:center;
 
-    gap:40px;
+    justify-content:space-between;
+
+    gap:34px;
+
+    padding:34px;
+
+    background:#ffffff;
+
+    border:1px solid #e8eef4;
+
+    border-radius:22px;
 
     box-shadow:
-        0 15px 35px rgba(15,23,42,.05);
+        0 14px 30px rgba(15,23,42,.05);
 
 }
 
@@ -390,9 +429,11 @@
 
     margin:0;
 
+    color:#0f172a;
+
     font-size:28px;
 
-    color:#0f172a;
+    font-weight:800;
 
 }
 
@@ -408,47 +449,34 @@
 
 }
 
-.summary-right{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-}
-
 .summary-right button{
+
+    padding:15px 34px;
 
     border:none;
 
+    border-radius:999px;
+
     cursor:pointer;
 
-    padding:16px 34px;
-
-    border-radius:999px;
+    color:#fff;
 
     font-size:15px;
 
     font-weight:700;
 
-    color:#fff;
-
     background:
-
     linear-gradient(
-        90deg,
+        135deg,
         #166534,
         #16a34a,
         #22c55e
     );
 
     box-shadow:
+        0 14px 30px rgba(22,163,74,.25);
 
-    0 15px 30px
-    rgba(22,163,74,.25);
-
-    transition:.30s;
+    transition:.3s;
 
 }
 
@@ -457,145 +485,176 @@
     transform:translateY(-3px);
 
     box-shadow:
-
-    0 22px 40px
-    rgba(22,163,74,.35);
+        0 20px 36px rgba(22,163,74,.32);
 
 }
 
 /* =====================================================
-   Responsive
+   Tablet
 ===================================================== */
 
 @media(max-width:1100px){
 
-.coverage-grid{
+    .coverage-grid{
 
-grid-template-columns:
-repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
+
+    }
 
 }
 
-}
+/* =====================================================
+   Mobile
+===================================================== */
 
 @media(max-width:768px){
 
-.coverage-section{
+    .coverage-section{
 
-padding:70px 18px;
+        padding:0 16px 55px;
+
+    }
+
+    .coverage-hero{
+
+        height:180px;
+
+        margin-bottom:30px;
+
+        border-radius:0 0 20px 20px;
+
+    }
+
+    .coverage-hero h1{
+
+        font-size:30px;
+
+    }
+
+    .coverage-hero p{
+
+        font-size:14px;
+
+        line-height:1.6;
+
+    }
+
+    .coverage-grid{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+    }
+
+    .coverage-card{
+
+        padding:22px;
+
+        border-radius:18px;
+
+    }
+
+    .coverage-icon{
+
+        width:56px;
+
+        height:56px;
+
+        border-radius:16px;
+
+        margin-bottom:16px;
+
+        font-size:26px;
+
+    }
+
+    .coverage-content h3{
+
+        font-size:28px;
+
+    }
+
+    .coverage-summary{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        padding:24px 20px;
+
+        gap:22px;
+
+        border-radius:18px;
+
+    }
+
+    .summary-right{
+
+        width:100%;
+
+    }
+
+    .summary-right button{
+
+        width:100%;
+
+    }
 
 }
 
-.coverage-header h2{
-
-font-size:34px;
-
-}
-
-.coverage-header p{
-
-font-size:15px;
-
-}
-
-.coverage-grid{
-
-grid-template-columns:1fr;
-
-gap:22px;
-
-}
-
-.coverage-card{
-
-padding:24px;
-
-}
-
-.coverage-content h3{
-
-font-size:34px;
-
-}
-
-.coverage-summary{
-
-flex-direction:column;
-
-align-items:flex-start;
-
-padding:28px;
-
-}
-
-.summary-right{
-
-width:100%;
-
-}
-
-.summary-right button{
-
-width:100%;
-
-}
-
-}
+/* =====================================================
+   Small Mobile
+===================================================== */
 
 @media(max-width:480px){
 
-.coverage-section{
+    .coverage-section{
 
-padding:60px 15px;
+        padding:0 12px 42px;
 
-}
+    }
 
-.coverage-header h2{
+    .coverage-hero{
 
-font-size:28px;
+        height:160px;
 
-}
+    }
 
-.coverage-header p{
+    .coverage-hero h1{
 
-font-size:14px;
+        font-size:25px;
 
-}
+    }
 
-.coverage-card{
+    .coverage-hero p{
 
-padding:20px;
+        font-size:13px;
 
-border-radius:20px;
+    }
 
-}
+    .coverage-card{
 
-.coverage-icon{
+        padding:18px;
 
-width:58px;
+    }
 
-height:58px;
+    .coverage-content h3{
 
-font-size:28px;
+        font-size:24px;
 
-}
+    }
 
-.coverage-content h3{
+    .summary-left h3{
 
-font-size:30px;
+        font-size:22px;
 
-}
+    }
 
-.coverage-content h3 span{
+    .summary-left p{
 
-font-size:18px;
+        font-size:14px;
 
-}
-
-.summary-left h3{
-
-font-size:24px;
-
-}
+    }
 
 }

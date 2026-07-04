@@ -15,50 +15,54 @@ function About() {
 
             <main className="about-page">
 
-                <div className="container">
+                {/* ==========================================
+                    Hero Banner
+                ========================================== */}
 
-                    {/* ==========================
-                        Banner
-                    =========================== */}
+                <section className="about-banner">
 
-                    <section className="about-banner">
+                    <img
+                        src={aboutBanner}
+                        alt="Haryana Village Digital Shajra"
+                    />
 
-                        <img
-                            src={aboutBanner}
-                            alt="Haryana Village Digital Shajra"
-                        />
-
-                        <div className="banner-overlay">
-
-                            <h1>
-
-                                Haryana Village
-                                Digital Shajra
-
-                            </h1>
-
-                            <p>
-
-                                Making Village Digital Shajra
-                                Accessible Across Haryana
-
-                            </p>
-
-                        </div>
-
-                    </section>
-
-                    {/* ==========================
-                        About
-                    =========================== */}
-
-                    <section className="about-card">
+                    <div className="banner-overlay">
 
                         <span className="about-tag">
 
                             ABOUT THE PORTAL
 
                         </span>
+
+                        <h1>
+
+                            Haryana Village
+                            <br />
+                            Digital Shajra
+
+                        </h1>
+
+                        <p>
+
+                            Making village-wise Digital Shajra
+                            easily accessible, organized and
+                            available across Haryana through a
+                            simple, secure and user-friendly
+                            digital platform.
+
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <div className="container">
+
+                    {/* ==========================================
+                        About
+                    ========================================== */}
+
+                    <section className="about-card">
 
                         <h2>
 
@@ -68,28 +72,41 @@ function About() {
 
                         <p>
 
-                            Haryana Village Digital Shajra is a portal that
-                            provides easy access to village-wise Digital
-                            Shajra maps across Haryana. It helps users
-                            quickly locate and view the available Digital
-                            Shajra for their selected village.
+                            Haryana Village Digital Shajra is an
+                            initiative to provide quick and
+                            convenient access to village-wise
+                            Digital Shajra maps across Haryana
+                            through a clean and easy-to-use web
+                            portal.
 
                         </p>
 
                         <p>
 
-                            Users can simply select a district, choose a
-                            tehsil, and then select a village to open the
-                            available Digital Shajra map from one place,
-                            making the search process easy and organized.
+                            Users can simply select a District,
+                            choose a Tehsil and then browse the
+                            available villages to open the
+                            corresponding Digital Shajra map from
+                            one place without searching across
+                            multiple sources.
+
+                        </p>
+
+                        <p>
+
+                            The portal is designed with a modern,
+                            mobile-friendly interface to make land
+                            record navigation simpler for citizens,
+                            professionals and anyone looking for
+                            village Digital Shajra information.
 
                         </p>
 
                     </section>
 
-                    {/* ==========================
+                    {/* ==========================================
                         Vision
-                    =========================== */}
+                    ========================================== */}
 
                     <section className="vision-card">
 
@@ -101,10 +118,12 @@ function About() {
 
                         <p>
 
-                            Our vision is to make village-wise Digital
-                            Shajra maps easily accessible, organized,
-                            and available at one place for everyone
-                            across Haryana.
+                            Our vision is to make every available
+                            village Digital Shajra across Haryana
+                            easily accessible, organized and
+                            available from a single digital
+                            platform with a fast, reliable and
+                            user-friendly experience.
 
                         </p>
 
