@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://haryana-village-digital-shajra.vercel.app/sitemap.xml
