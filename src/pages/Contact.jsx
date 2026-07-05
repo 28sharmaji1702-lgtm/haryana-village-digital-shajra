@@ -116,7 +116,7 @@ function Contact() {
 </a>
 
 <a
-    href="https://t.me/patwari8120"
+    href="https://t.me/shjraportal"
     target="_blank"
     rel="noopener noreferrer"
     className="social-card telegram"
