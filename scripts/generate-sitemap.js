@@ -17,39 +17,112 @@ const lines = csv.trim().split(/\r?\n/);
 lines.shift();
 
 const base = "https://haryana-village-digital-shajra.vercel.app";
+const publicDir = path.join(__dirname, "..", "public");
 
-const urls = [
+const today = new Date().toISOString().split("T")[0];
+const CHUNK_SIZE = 2000;
+
+// --------------------
+// Static Pages
+// --------------------
+
+const pages = [
   `${base}/`,
   `${base}/about`,
   `${base}/contact`,
   `${base}/coverage`,
 ];
 
+// --------------------
+// Village URLs
+// --------------------
+
+const villages = [];
+
 for (const line of lines) {
   const cols = line.split(",");
-
   const code = cols[3]?.trim();
 
   if (code) {
-    urls.push(`${base}/village/${code}`);
+    villages.push(`${base}/village/${code}`);
   }
 }
 
-let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
-xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+// --------------------
+// URLSET Generator
+// --------------------
 
-for (const url of urls) {
-  xml += `  <url>\n`;
-  xml += `    <loc>${url}</loc>\n`;
-  xml += `  </url>\n`;
+function createUrlSet(urls) {
+  let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+  xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+
+  for (const url of urls) {
+    xml += `  <url>\n`;
+    xml += `    <loc>${url}</loc>\n`;
+    xml += `    <lastmod>${today}</lastmod>\n`;
+    xml += `    <changefreq>weekly</changefreq>\n`;
+    xml += `    <priority>0.8</priority>\n`;
+    xml += `  </url>\n`;
+  }
+
+  xml += `</urlset>`;
+  return xml;
 }
 
-xml += `</urlset>`;
+// --------------------
+// Pages Sitemap
+// --------------------
 
 fs.writeFileSync(
-  path.join(__dirname, "..", "public", "sitemap.xml"),
-  xml
+  path.join(publicDir, "sitemap-pages.xml"),
+  createUrlSet(pages)
 );
 
-console.log(`✅ Sitemap generated successfully.`);
-console.log(`Total URLs: ${urls.length}`);
+// --------------------
+// Village Sitemaps
+// --------------------
+
+const sitemapFiles = ["sitemap-pages.xml"];
+
+let index = 1;
+
+for (let i = 0; i < villages.length; i += CHUNK_SIZE) {
+  const chunk = villages.slice(i, i + CHUNK_SIZE);
+
+  const filename = `sitemap-${index}.xml`;
+
+  fs.writeFileSync(
+    path.join(publicDir, filename),
+    createUrlSet(chunk)
+  );
+
+  sitemapFiles.push(filename);
+
+  index++;
+}
+
+// --------------------
+// Sitemap Index
+// --------------------
+
+let indexXml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+indexXml += `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+
+for (const file of sitemapFiles) {
+  indexXml += `  <sitemap>\n`;
+  indexXml += `    <loc>${base}/${file}</loc>\n`;
+  indexXml += `    <lastmod>${today}</lastmod>\n`;
+  indexXml += `  </sitemap>\n`;
+}
+
+indexXml += `</sitemapindex>`;
+
+fs.writeFileSync(
+  path.join(publicDir, "sitemap.xml"),
+  indexXml
+);
+
+console.log("✅ Sitemap generation completed.");
+console.log(`📄 Pages Sitemap : sitemap-pages.xml`);
+console.log(`🗺️ Village Sitemaps : ${index - 1}`);
+console.log(`📦 Total Village URLs : ${villages.length}`);
